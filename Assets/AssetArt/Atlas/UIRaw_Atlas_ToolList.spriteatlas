@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UIRaw_Atlas_ToolList
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 49
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: WebGL
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 21300000, guid: b43ba8c359bba08428e8153712e77440, type: 3}
+    - {fileID: 21300000, guid: abd7905ddf497a64ebafe29d82d364bf, type: 3}
+    - {fileID: 21300000, guid: ef6d885f03a5e744eabf4e3f7c1ec0df, type: 3}
+    - {fileID: 21300000, guid: c2423038e0ef9774bbe53123e777043b, type: 3}
+    - {fileID: 21300000, guid: 4921fc4c467018145827a56be9e59673, type: 3}
+    - {fileID: 21300000, guid: 8db9ba0d3f2e5d9438e2b183f9024fe6, type: 3}
+    - {fileID: 21300000, guid: f668f61ae44c8424fbe0b46add503711, type: 3}
+    - {fileID: 21300000, guid: c6984bfdf4eb4c74287401370c71cddd, type: 3}
+    - {fileID: 21300000, guid: 710a3373caf82bc479abaa0eb249b1da, type: 3}
+    - {fileID: 21300000, guid: 8a05febe8af581b44bfc45156ed9edb6, type: 3}
+    - {fileID: 21300000, guid: 0d25bf85c521f75418aa6fe111bb772a, type: 3}
+    - {fileID: 21300000, guid: 62147d9618f01b04bb63ebc2890a5d6f, type: 3}
+    - {fileID: 21300000, guid: 1d09fb539fb4c04409509cd47a6340b4, type: 3}
+    - {fileID: 21300000, guid: 66bde93995f708e4e8b980e5b9fd5534, type: 3}
+    - {fileID: 21300000, guid: d32c2f5502c2f93439cd114bd322890e, type: 3}
+    - {fileID: 21300000, guid: e48a1260fc792c945b7c4d1913d7c137, type: 3}
+    - {fileID: 21300000, guid: b3947ff3fcb8bf540bc863bccb2f22e5, type: 3}
+    - {fileID: 21300000, guid: d2c49bb0860ceeb4ab57b93e5f38afed, type: 3}
+    - {fileID: 21300000, guid: df819c75bc810914da990a4da55e5fd0, type: 3}
+    - {fileID: 21300000, guid: f41da00ab8699c3489ec6b5a870c026d, type: 3}
+    - {fileID: 21300000, guid: 6d3548695ac0d2d4ebd7a29127a2b2e7, type: 3}
+    - {fileID: 21300000, guid: baebdedb2f450c14f8cea6e244688ba0, type: 3}
+    - {fileID: 21300000, guid: b1c8949878b20da4cbc42924485d9f03, type: 3}
+    - {fileID: 21300000, guid: a4476b8cd15edc845bf30bb302f515df, type: 3}
+    - {fileID: 21300000, guid: 52304c3876bf49c488e070151d3b68c8, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - e48a1260fc792c945b7c4d1913d7c137: 21300000
+    - d2c49bb0860ceeb4ab57b93e5f38afed: 21300000
+    - 1d09fb539fb4c04409509cd47a6340b4: 21300000
+    - 710a3373caf82bc479abaa0eb249b1da: 21300000
+    - b43ba8c359bba08428e8153712e77440: 21300000
+    - b3947ff3fcb8bf540bc863bccb2f22e5: 21300000
+    - d32c2f5502c2f93439cd114bd322890e: 21300000
+    - df819c75bc810914da990a4da55e5fd0: 21300000
+    - 0d25bf85c521f75418aa6fe111bb772a: 21300000
+    - 62147d9618f01b04bb63ebc2890a5d6f: 21300000
+    - c2423038e0ef9774bbe53123e777043b: 21300000
+    - 52304c3876bf49c488e070151d3b68c8: 21300000
+    - b1c8949878b20da4cbc42924485d9f03: 21300000
+    - 66bde93995f708e4e8b980e5b9fd5534: 21300000
+    - 6d3548695ac0d2d4ebd7a29127a2b2e7: 21300000
+    - f41da00ab8699c3489ec6b5a870c026d: 21300000
+    - f668f61ae44c8424fbe0b46add503711: 21300000
+    - baebdedb2f450c14f8cea6e244688ba0: 21300000
+    - 4921fc4c467018145827a56be9e59673: 21300000
+    - a4476b8cd15edc845bf30bb302f515df: 21300000
+    - 8db9ba0d3f2e5d9438e2b183f9024fe6: 21300000
+    - abd7905ddf497a64ebafe29d82d364bf: 21300000
+    - c6984bfdf4eb4c74287401370c71cddd: 21300000
+    - 8a05febe8af581b44bfc45156ed9edb6: 21300000
+    - ef6d885f03a5e744eabf4e3f7c1ec0df: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e48a1260fc792c945b7c4d1913d7c137, type: 3}
+  - {fileID: 21300000, guid: d2c49bb0860ceeb4ab57b93e5f38afed, type: 3}
+  - {fileID: 21300000, guid: 1d09fb539fb4c04409509cd47a6340b4, type: 3}
+  - {fileID: 21300000, guid: 710a3373caf82bc479abaa0eb249b1da, type: 3}
+  - {fileID: 21300000, guid: b43ba8c359bba08428e8153712e77440, type: 3}
+  - {fileID: 21300000, guid: b3947ff3fcb8bf540bc863bccb2f22e5, type: 3}
+  - {fileID: 21300000, guid: d32c2f5502c2f93439cd114bd322890e, type: 3}
+  - {fileID: 21300000, guid: df819c75bc810914da990a4da55e5fd0, type: 3}
+  - {fileID: 21300000, guid: 0d25bf85c521f75418aa6fe111bb772a, type: 3}
+  - {fileID: 21300000, guid: 62147d9618f01b04bb63ebc2890a5d6f, type: 3}
+  - {fileID: 21300000, guid: c2423038e0ef9774bbe53123e777043b, type: 3}
+  - {fileID: 21300000, guid: 52304c3876bf49c488e070151d3b68c8, type: 3}
+  - {fileID: 21300000, guid: b1c8949878b20da4cbc42924485d9f03, type: 3}
+  - {fileID: 21300000, guid: 66bde93995f708e4e8b980e5b9fd5534, type: 3}
+  - {fileID: 21300000, guid: 6d3548695ac0d2d4ebd7a29127a2b2e7, type: 3}
+  - {fileID: 21300000, guid: f41da00ab8699c3489ec6b5a870c026d, type: 3}
+  - {fileID: 21300000, guid: f668f61ae44c8424fbe0b46add503711, type: 3}
+  - {fileID: 21300000, guid: baebdedb2f450c14f8cea6e244688ba0, type: 3}
+  - {fileID: 21300000, guid: 4921fc4c467018145827a56be9e59673, type: 3}
+  - {fileID: 21300000, guid: a4476b8cd15edc845bf30bb302f515df, type: 3}
+  - {fileID: 21300000, guid: 8db9ba0d3f2e5d9438e2b183f9024fe6, type: 3}
+  - {fileID: 21300000, guid: abd7905ddf497a64ebafe29d82d364bf, type: 3}
+  - {fileID: 21300000, guid: c6984bfdf4eb4c74287401370c71cddd, type: 3}
+  - {fileID: 21300000, guid: 8a05febe8af581b44bfc45156ed9edb6, type: 3}
+  - {fileID: 21300000, guid: ef6d885f03a5e744eabf4e3f7c1ec0df, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-2 1"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-3"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-1 2"
+  - "\u4E0B\u7BAD\u5934\u4E0D\u53EF\u7528"
+  - box
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-2"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-1"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-4"
+  - "\u6293\u7740\u9053\u5177\u7684\u624B"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-1 1"
+  - tool list
+  - "\u9053\u5177\u6307\u793A\u6587\u5B57\u80CC\u666F\u9ED1\u5FEB"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-8"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-1 3"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-6"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-5"
+  - "\u4E0A\u7BAD\u5934\u6309\u4E0B"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-7"
+  - "\u4E0A\u7BAD\u5934"
+  - "\u672A\u547D\u540D\u7684\u4F5C\u54C1"
+  - "\u4E0A\u7BAD\u5934\u4E0D\u53EF\u7528"
+  - dialoguebox
+  - "\u4E0B\u7BAD\u5934"
+  - "\u4E0B\u7BAD\u5934\u6309\u4E0B"
+  - menu
+  m_RenderDataMap: {}
+  m_Tag: UIRaw_Atlas_ToolList
+  m_IsVariant: 0
