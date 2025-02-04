@@ -19,19 +19,14 @@ namespace TEngine
                 canvasGroup=this.gameObject.AddComponent<CanvasGroup>();
             } 
             canvasGroup.alpha = 0;
-                
-            DOTween.To(() => canvasGroup.alpha, x => canvasGroup.alpha = x, 1, fadeInDuration).OnComplete(delegate()
-            {
-                //Debug.Log("透明度变化完成");
-            });
         }
 
         void OnEnable()
         {
-            // DOTween.To(() => canvasGroup.alpha, x => canvasGroup.alpha = x, 1, fadeInDuration).OnComplete(delegate()
-            // {
-            //     //Debug.Log("透明度变化完成");
-            // });
+            DOTween.To(() => canvasGroup.alpha, x => canvasGroup.alpha = x, 1, fadeInDuration).OnComplete(delegate()
+            {
+                //Debug.Log("透明度变化完成");
+            });
         }
 
         void OnDisable()

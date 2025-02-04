@@ -1,3 +1,4 @@
+using GameConfig.item;
 using UnityEngine;
 using UnityEngine.UI;
 using TEngine;
@@ -25,7 +26,11 @@ namespace GameLogic
         #region 事件
         private void OnClickGlovesBtn()
         {
-            
+            //ConfigLoader.Instance.Tables.GetTable<TbItem>(10000);
+            var skillBaseConfig = ConfigLoader.Instance.Tables.TbItem.Get(10000);
+            Log.Error(skillBaseConfig);
+            var test2= ConfigSystem.Instance.Tables.TbItem[10001];
+            Log.Error(test2);
         }
         private void OnClickRightBtn()
         {
