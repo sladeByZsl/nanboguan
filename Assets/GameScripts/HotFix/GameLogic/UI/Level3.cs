@@ -11,15 +11,31 @@ namespace GameLogic
         private Text m_text1;
         private Text m_text2;
         private Text m_text3;
+        private Button m_btnRight;
+        private Button m_btnLeft;
         protected override void ScriptGenerator()
         {
             m_text1 = FindChildComponent<Text>("m_text1");
             m_text2 = FindChildComponent<Text>("m_text2");
             m_text3 = FindChildComponent<Text>("m_text3");
+            m_btnRight = FindChildComponent<Button>("m_btnRight");
+            m_btnLeft = FindChildComponent<Button>("m_btnLeft");
+            m_btnRight.onClick.AddListener(OnClickRightBtn);
+            m_btnLeft.onClick.AddListener(OnClickLeftBtn);
         }
         #endregion
 
         #region 事件
+        private void OnClickRightBtn()
+        {
+            GameModule.UI.HideUI<Level3>();
+            GameModule.UI.ShowUI<Level4>();
+        }
+        private void OnClickLeftBtn()
+        {
+            GameModule.UI.HideUI<Level3>();
+            GameModule.UI.ShowUI<Level2>();
+        }
         #endregion
 
     }

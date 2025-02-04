@@ -19,6 +19,8 @@ namespace TEngine
 
         private Canvas _canvas;
 
+        private AutoFade _autoFade;
+
         private Canvas[] _childCanvas;
 
         private GraphicRaycaster _raycaster;
@@ -420,6 +422,13 @@ namespace TEngine
             {
                 throw new Exception($"Not found {nameof(Canvas)} in panel {WindowName}");
             }
+
+            _autoFade=panel.GetComponent<AutoFade>();
+            if (_autoFade==null)
+            {
+                _autoFade=panel.AddComponent<AutoFade>();
+            }
+            
 
             _canvas.overrideSorting = true;
             _canvas.sortingOrder = 0;
