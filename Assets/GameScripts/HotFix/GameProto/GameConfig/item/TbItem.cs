@@ -12,7 +12,7 @@ using Luban;
 
 namespace GameConfig.item
 {
-public partial class TbItem:IConfig<int, item.Item>
+public partial class TbItem
 {
     private readonly System.Collections.Generic.Dictionary<int, item.Item> _dataMap;
     private readonly System.Collections.Generic.List<item.Item> _dataList;

@@ -24,13 +24,23 @@ namespace GameLogic
         #endregion
 
         #region 事件
+
+        private int itemId = 10000;
         private void OnClickGlovesBtn()
         {
+            BagManager.Instance.AddItem(10000);
+            m_btnGloves.gameObject.SetActive(false);
+            // if (itemId < 10005)
+            // {
+            //     BagManager.Instance.AddItem(itemId);
+            //     itemId++;
+            // }
+        
             //ConfigLoader.Instance.Tables.GetTable<TbItem>(10000);
-            var skillBaseConfig = ConfigLoader.Instance.Tables.TbItem.Get(10000);
-            Log.Error(skillBaseConfig);
-            var test2= ConfigSystem.Instance.Tables.TbItem[10001];
-            Log.Error(test2);
+            // var skillBaseConfig = ConfigLoader.Instance.Tables.TbItem.Get(10000);
+            // Log.Error(skillBaseConfig);
+            // var test2= ConfigSystem.Instance.Tables.TbItem[10001];
+            // Log.Error(test2);
         }
         private void OnClickRightBtn()
         {
@@ -43,5 +53,17 @@ namespace GameLogic
         }
         #endregion
 
+        protected override void RegisterEvent()
+        {
+            AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
+        }
+
+        private void OnAddItem(int id)
+        {
+            if (id == 1000)
+            {
+                m_btnGloves.gameObject.SetActive(false);
+            }
+        }
     }
 }

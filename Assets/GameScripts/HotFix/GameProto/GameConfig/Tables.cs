@@ -7,15 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using Luban;
 
 namespace GameConfig
 {
 public partial class Tables
 {
-    private readonly Dictionary<Type, object> _tableCache = new Dictionary<Type, object>();
     #region The Tables
 
     private item.TbItem m_TbItem;
@@ -27,7 +24,6 @@ public partial class Tables
             {
                 m_TbItem = new item.TbItem(defaultLoader("item_tbitem"));
                 m_TbItem.ResolveRef(this);
-                _tableCache[typeof(item.TbItem)] = m_TbItem;
             }
             return m_TbItem;
         }
@@ -35,7 +31,6 @@ public partial class Tables
         {
             m_TbItem = value;
             m_TbItem.ResolveRef(this);
-            _tableCache[typeof(item.TbItem)] = m_TbItem;
         }
     }
 
@@ -55,16 +50,7 @@ public partial class Tables
         defaultLoader = loader;
     }
 
-    // public  T GetTable<T>(int id) where T : class
-    // {
-    //     var type = typeof(T);
-    //     if (_tableCache.TryGetValue(type, out var table))
-    //     {
-    //         var tb= table as IConfig;
-    //         return tb.Get(id);
-    //     }
-    //     return null;
-    // }
+    //public partial void Init();
 
     public void Init(){}
 }
