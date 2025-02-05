@@ -54,8 +54,62 @@
             "BundleID": 1
         },
         {
+            "Address": "defaultItem",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/defaultItem.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
             "Address": "dialoguebox",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/dialoguebox.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Brick",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Brick.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Doorknob",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Doorknob.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Gloves",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Gloves.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Origin",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Origin.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Sticker",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Sticker.png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -243,15 +297,6 @@
             "BundleID": 1
         },
         {
-            "Address": "未命名的作品-8",
-            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-8.png",
-            "AssetGUID": "",
-            "AssetTags": [
-                "UIRaw"
-            ],
-            "BundleID": 1
-        },
-        {
             "Address": "未命名的作品",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品.png",
             "AssetGUID": "",
@@ -270,15 +315,6 @@
             "BundleID": 1
         },
         {
-            "Address": "Gloves",
-            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room1/Gloves.png",
-            "AssetGUID": "",
-            "AssetTags": [
-                "UIRaw"
-            ],
-            "BundleID": 2
-        },
-        {
             "Address": "R1_bg",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room1/R1_bg.png",
             "AssetGUID": "",
@@ -290,15 +326,6 @@
         {
             "Address": "R2_bg",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room2/R2_bg.png",
-            "AssetGUID": "",
-            "AssetTags": [
-                "UIRaw"
-            ],
-            "BundleID": 3
-        },
-        {
-            "Address": "R2_origin",
-            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room2/R2_origin.png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -334,13 +361,23 @@
             "BundleID": 6
         },
         {
+            "Address": "item_tbitem",
+            "AssetPath": "Assets/AssetRaw/Configs/bytes/item_tbitem.bytes",
+            "AssetGUID": "",
+            "AssetTags": [
+                "Configs",
+                "WEBGL_PRELOAD"
+            ],
+            "BundleID": 7
+        },
+        {
             "Address": "Level1",
             "AssetPath": "Assets/AssetRaw/UI/Level1.prefab",
             "AssetGUID": "",
             "AssetTags": [
                 "UI"
             ],
-            "BundleID": 7
+            "BundleID": 8
         },
         {
             "Address": "Level2",
@@ -349,7 +386,7 @@
             "AssetTags": [
                 "UI"
             ],
-            "BundleID": 8
+            "BundleID": 9
         },
         {
             "Address": "Level3",
@@ -358,7 +395,7 @@
             "AssetTags": [
                 "UI"
             ],
-            "BundleID": 9
+            "BundleID": 10
         },
         {
             "Address": "Level4",
@@ -367,7 +404,7 @@
             "AssetTags": [
                 "UI"
             ],
-            "BundleID": 10
+            "BundleID": 11
         },
         {
             "Address": "LevelCommon",
@@ -376,7 +413,7 @@
             "AssetTags": [
                 "UI"
             ],
-            "BundleID": 11
+            "BundleID": 12
         }
     ],
     "BundleList": [
@@ -395,7 +432,7 @@
             "UnityCRC": 0,
             "FileHash": "525e3c70591cfc3846d5f98a259571ce",
             "FileCRC": "00000000",
-            "FileSize": 2462348,
+            "FileSize": 2616671,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -405,7 +442,7 @@
             "UnityCRC": 0,
             "FileHash": "3389aebbf3f9da0fd328af40c627c653",
             "FileCRC": "00000000",
-            "FileSize": 526271,
+            "FileSize": 488311,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -415,7 +452,7 @@
             "UnityCRC": 0,
             "FileHash": "a9e9b5a3c9c4504b32951d756ff27a74",
             "FileCRC": "00000000",
-            "FileSize": 1005605,
+            "FileSize": 943516,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -451,11 +488,21 @@
             "DependIDs": []
         },
         {
+            "BundleName": "assets_assetraw_configs_bytes.bundle",
+            "UnityCRC": 0,
+            "FileHash": "afd1e050fc3c0e8abaab7271a9ea01c4",
+            "FileCRC": "00000000",
+            "FileSize": 149,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
             "BundleName": "assets_assetraw_ui_level1.bundle",
             "UnityCRC": 0,
             "FileHash": "6951d60d076757fb3f6b107d8ac5e130",
             "FileCRC": "00000000",
-            "FileSize": 16376,
+            "FileSize": 18569,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -465,7 +512,7 @@
             "UnityCRC": 0,
             "FileHash": "872342b3c8764cd6f40a27568babb4ef",
             "FileCRC": "00000000",
-            "FileSize": 15549,
+            "FileSize": 15552,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -495,7 +542,7 @@
             "UnityCRC": 0,
             "FileHash": "0d8444d5b75e7187a47605c1ac43bdae",
             "FileCRC": "00000000",
-            "FileSize": 21198,
+            "FileSize": 25595,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

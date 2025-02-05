@@ -25,5 +25,14 @@ namespace GameLogic
         {
             return itemList;
         }
+
+        public void UseItem(int itemId)
+        {
+            if (itemList.Contains(itemId))
+            {
+                itemList.Remove(itemId);
+                GameEvent.Send(ClientEventID.UseItem,itemId);
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ using TEngine;
 namespace GameLogic
 {
     [Window(UILayer.UI)]
-    class Level2 : UIWindow
+    public class Level2 : UIWindow
     {
         #region 脚本工具生成的代码
         private Button m_btnBottle;

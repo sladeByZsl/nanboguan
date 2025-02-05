@@ -3,14 +3,17 @@ using UnityEngine.UI;
 using TEngine;
 using System.Collections.Generic;
 using GameConfig.item;
+using UnityEngine.EventSystems;
 
 namespace GameLogic
 {
     [Window(UILayer.UI)]
-    class LevelCommon : UIWindow
+    public class LevelCommon : UIWindow
     {
         private List<int> m_itemList = new List<int>();  // 存储所有道具ID
         private int m_currentIndex = 0;  // 当前显示的起始索引
+        private Vector2 m_item1OriginalPos; // 存储Item1的原始位置
+    private Vector2 m_item2OriginalPos; // 存储Item2的原始位置
 
         #region 脚本工具生成的代码
 		private Button m_btnUpArrow;
@@ -21,10 +24,16 @@ namespace GameLogic
 		{
 			m_btnUpArrow = FindChildComponent<Button>("m_btnUpArrow");
 			m_imgItem1 = FindChildComponent<Image>("item1/m_imgItem1");
+            m_imgItem1.gameObject.AddComponent<ItemDragHandler>().Init(this,0);
 			m_imgItem2 = FindChildComponent<Image>("item2/m_imgItem2");
+             m_imgItem2.gameObject.AddComponent<ItemDragHandler>().Init(this,1);
 			m_btnDownArrow = FindChildComponent<Button>("m_btnDownArrow");
 			m_btnUpArrow.onClick.AddListener(OnClickUpArrowBtn);
 			m_btnDownArrow.onClick.AddListener(OnClickDownArrowBtn);
+
+             // 保存原始位置
+            m_item1OriginalPos = m_imgItem1.rectTransform.anchoredPosition;
+            m_item2OriginalPos = m_imgItem2.rectTransform.anchoredPosition;
 		}
 		#endregion
 
@@ -50,9 +59,9 @@ namespace GameLogic
 
         protected override void RegisterEvent()
         {
-            AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
+            AddUIEvent<int>(ClientEventID.AddItem,OnRefreshItem);
+            AddUIEvent<int>(ClientEventID.UseItem,OnRefreshItem);
         }
-
         private void UpdateItemDisplay()
         {
             // 更新第一个道具显示
@@ -80,7 +89,7 @@ namespace GameLogic
             //m_btnDownArrow.interactable = m_currentIndex < m_itemList.Count - 2;
         }
 
-        private void OnAddItem(int itemID)
+        private void OnRefreshItem(int itemID)
         {
             //Debug.LogError(itemID);
             m_itemList=BagManager.Instance.GetItemList();
@@ -98,6 +107,48 @@ namespace GameLogic
         private void SetItemDefault(Image imgComponent)
         {
             imgComponent.sprite=GameModule.Resource.LoadAsset<Sprite>($"defaultItem");
+        }
+
+       // 新增：处理物品拖拽结束
+        public void OnItemDragEnd(int itemIndex, PointerEventData eventData)
+        {
+            Image targetImage = itemIndex == 0 ? m_imgItem1 : m_imgItem2;
+            Vector2 originalPos = itemIndex == 0 ? m_item1OriginalPos : m_item2OriginalPos;
+            
+            // 检查是否触碰到带特定Tag的UI
+            if (IsPointerOverTaggedUI(eventData))
+            {
+                int realItemIndex = m_currentIndex + itemIndex;
+                if (realItemIndex < m_itemList.Count)
+                {
+                    int itemId = m_itemList[realItemIndex];
+                    // 触发物品使用事件
+                    TriggerItemUse(itemId);
+                }
+            }
+            
+            // 无论如何都要返回原位
+            targetImage.rectTransform.anchoredPosition = originalPos;
+        }
+
+        private void TriggerItemUse(int itemId)
+        {
+            BagManager.Instance.UseItem(itemId);
+            Log.Debug("UseItem:"+itemId);
+        }
+
+        private bool IsPointerOverTaggedUI(PointerEventData eventData)
+        {
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventData, results);
+
+            foreach (var result in results)
+            {
+                if (result.gameObject.layer == Global.TRIGGER_TAG)
+                    return true;
+            }
+
+            return false;
         }
     }
 }

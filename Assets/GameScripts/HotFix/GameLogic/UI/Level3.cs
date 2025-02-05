@@ -5,7 +5,7 @@ using TEngine;
 namespace GameLogic
 {
     [Window(UILayer.UI)]
-    class Level3 : UIWindow
+    public class Level3 : UIWindow
     {
         #region 脚本工具生成的代码
         private Text m_text1;
