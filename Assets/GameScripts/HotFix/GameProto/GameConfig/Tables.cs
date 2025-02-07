@@ -33,6 +33,24 @@ public partial class Tables
             m_TbItem.ResolveRef(this);
         }
     }
+    private i18n.TbI18L m_TbI18L;
+    public i18n.TbI18L TbI18L 
+    {
+        get
+        {
+            if (m_TbI18L == null)
+            {
+                m_TbI18L = new i18n.TbI18L(defaultLoader("i18n_tbi18l"));
+                m_TbI18L.ResolveRef(this);
+            }
+            return m_TbI18L;
+        }
+        set
+        {
+            m_TbI18L = value;
+            m_TbI18L.ResolveRef(this);
+        }
+    }
 
     #endregion
 

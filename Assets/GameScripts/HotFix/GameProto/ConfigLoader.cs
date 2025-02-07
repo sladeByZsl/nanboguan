@@ -4,6 +4,12 @@ using GameConfig;
 using TEngine;
 using UnityEngine;
 
+
+// public class ConfigManager
+// {
+//     public static ConfigManager ConfigManager=ConfigLoader.Instance.Tables;
+// }
+
 /// <summary>
 /// 配置加载器。
 /// </summary>
@@ -11,6 +17,7 @@ public class ConfigLoader : Singleton<ConfigLoader>
 {
     private bool _init = false;
 
+    
     private Tables _tables;
 
     public Tables Tables

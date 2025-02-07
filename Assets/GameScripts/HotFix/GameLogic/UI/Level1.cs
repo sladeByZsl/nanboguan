@@ -14,9 +14,9 @@ namespace GameLogic
         private Button m_btnLeft;
         protected override void ScriptGenerator()
         {
-            m_btnGloves = FindChildComponent<Button>("m_btnGloves");
-            m_btnRight = FindChildComponent<Button>("m_btnRight");
-            m_btnLeft = FindChildComponent<Button>("m_btnLeft");
+            m_btnGloves = FindChildComponent<Button>("Bg/m_btnGloves");
+            m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
+            m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
             m_btnGloves.onClick.AddListener(OnClickGlovesBtn);
             m_btnRight.onClick.AddListener(OnClickRightBtn);
             m_btnLeft.onClick.AddListener(OnClickLeftBtn);
@@ -30,12 +30,14 @@ namespace GameLogic
         {
             BagManager.Instance.AddItem(10000);
             m_btnGloves.gameObject.SetActive(false);
+
+            Log.Error(LocalizationManager.Instance.GetText(Global.Key_level2_tips));
             // if (itemId < 10005)
             // {
             //     BagManager.Instance.AddItem(itemId);
             //     itemId++;
             // }
-        
+
             //ConfigLoader.Instance.Tables.GetTable<TbItem>(10000);
             // var skillBaseConfig = ConfigLoader.Instance.Tables.TbItem.Get(10000);
             // Log.Error(skillBaseConfig);

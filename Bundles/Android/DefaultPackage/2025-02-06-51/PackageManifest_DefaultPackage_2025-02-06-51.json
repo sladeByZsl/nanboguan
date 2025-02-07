@@ -1,0 +1,596 @@
+{
+    "FileVersion": "2.0.0",
+    "EnableAddressable": true,
+    "LocationToLower": false,
+    "IncludeAssetGUID": false,
+    "OutputNameStyle": 2,
+    "BuildPipeline": "ScriptableBuildPipeline",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2025-02-06-51",
+    "AssetList": [
+        {
+            "Address": "blue_button",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/blue_button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "red_button",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/red_button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "white_background",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/white_background.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "white_button",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/white_button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "box",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/box.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "defaultItem",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/defaultItem.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "dialoguebox",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/dialoguebox.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Brick",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Brick.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Doorknob",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Doorknob.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Gloves",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Gloves.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Origin",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Origin.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "Item_Sticker",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Sticker.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "menu",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/menu.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "tool list",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/tool list.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "上箭头",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/上箭头.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "上箭头不可用",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/上箭头不可用.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "上箭头按下",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/上箭头按下.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "下箭头",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/下箭头.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "下箭头不可用",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/下箭头不可用.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "下箭头按下",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/下箭头按下.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "抓着道具的手",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/抓着道具的手.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-1 1",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-1 1.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-1 2",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-1 2.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-1 3",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-1 3.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-1",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-1.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-2 1",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-2 1.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-2",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-2.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-3",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-3.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-4",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-4.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-5",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-5.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-6",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-6.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品-7",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品-7.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "未命名的作品",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/未命名的作品.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "道具指示文字背景黑快",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/道具指示文字背景黑快.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "R1_bg",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room1/R1_bg.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 2
+        },
+        {
+            "Address": "R2_bg",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room2/R2_bg.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 3
+        },
+        {
+            "Address": "R3_bg",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room3/R3_bg.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 4
+        },
+        {
+            "Address": "R4_bg",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room4/R4_bg.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 5
+        },
+        {
+            "Address": "about",
+            "AssetPath": "Assets/AssetRaw/Configs/about.txt",
+            "AssetGUID": "",
+            "AssetTags": [
+                "Configs",
+                "WEBGL_PRELOAD"
+            ],
+            "BundleID": 6
+        },
+        {
+            "Address": "item_tbitem",
+            "AssetPath": "Assets/AssetRaw/Configs/bytes/item_tbitem.bytes",
+            "AssetGUID": "",
+            "AssetTags": [
+                "Configs",
+                "WEBGL_PRELOAD"
+            ],
+            "BundleID": 7
+        },
+        {
+            "Address": "Level1",
+            "AssetPath": "Assets/AssetRaw/UI/Level1.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 8
+        },
+        {
+            "Address": "Level2",
+            "AssetPath": "Assets/AssetRaw/UI/Level2.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 9
+        },
+        {
+            "Address": "Level3",
+            "AssetPath": "Assets/AssetRaw/UI/Level3.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 10
+        },
+        {
+            "Address": "Level4",
+            "AssetPath": "Assets/AssetRaw/UI/Level4.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 11
+        },
+        {
+            "Address": "LevelCommon",
+            "AssetPath": "Assets/AssetRaw/UI/LevelCommon.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 12
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "assets_assetraw_uiraw_atlas_common.bundle",
+            "UnityCRC": 1253431615,
+            "FileHash": "d78af6023b6535fe0d762baa56d3afb5",
+            "FileCRC": "618fd1d5",
+            "FileSize": 21731,
+            "Encrypted": false,
+            "Tags": [
+                "UIRaw"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_uiraw_atlas_toollist.bundle",
+            "UnityCRC": 731929763,
+            "FileHash": "49b751bab318a77870966885243b53d6",
+            "FileCRC": "ae82f094",
+            "FileSize": 3256899,
+            "Encrypted": false,
+            "Tags": [
+                "UIRaw",
+                "UI"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_uiraw_raw_room1.bundle",
+            "UnityCRC": 2231374203,
+            "FileHash": "3f3f1affab36441a9ea57c85dbfb0b99",
+            "FileCRC": "b1443e27",
+            "FileSize": 140538,
+            "Encrypted": false,
+            "Tags": [
+                "UIRaw",
+                "UI"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_uiraw_raw_room2.bundle",
+            "UnityCRC": 1028753393,
+            "FileHash": "68328851e58cc637cd67c489a0155954",
+            "FileCRC": "5b3ae83f",
+            "FileSize": 246375,
+            "Encrypted": false,
+            "Tags": [
+                "UIRaw",
+                "UI"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_uiraw_raw_room3.bundle",
+            "UnityCRC": 1709119828,
+            "FileHash": "319a2664482122c096fdaa158f3689e7",
+            "FileCRC": "63d34bc4",
+            "FileSize": 83057,
+            "Encrypted": false,
+            "Tags": [
+                "UIRaw",
+                "UI"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_uiraw_raw_room4.bundle",
+            "UnityCRC": 4225140301,
+            "FileHash": "a41d0fdd792693420da05f1b78d7b79f",
+            "FileCRC": "7d273c1a",
+            "FileSize": 107969,
+            "Encrypted": false,
+            "Tags": [
+                "UIRaw",
+                "UI"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_configs.bundle",
+            "UnityCRC": 4088735527,
+            "FileHash": "24ed8d7ba90817d02cfd4fc8c65ab767",
+            "FileCRC": "39981346",
+            "FileSize": 1223,
+            "Encrypted": false,
+            "Tags": [
+                "Configs",
+                "WEBGL_PRELOAD"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_configs_bytes.bundle",
+            "UnityCRC": 405854886,
+            "FileHash": "db85d5f0a3540e865209a86b0e9bd970",
+            "FileCRC": "d85d19e5",
+            "FileSize": 1332,
+            "Encrypted": false,
+            "Tags": [
+                "Configs",
+                "WEBGL_PRELOAD"
+            ],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_ui_level1.bundle",
+            "UnityCRC": 1366871632,
+            "FileHash": "8ba510fa6421f203b111807dde3d8a84",
+            "FileCRC": "a26c4808",
+            "FileSize": 6615,
+            "Encrypted": false,
+            "Tags": [
+                "UI"
+            ],
+            "DependIDs": [
+                1,
+                2
+            ]
+        },
+        {
+            "BundleName": "assets_assetraw_ui_level2.bundle",
+            "UnityCRC": 778918109,
+            "FileHash": "474acd9f921612542b8c7115b561aeae",
+            "FileCRC": "034f41f4",
+            "FileSize": 6150,
+            "Encrypted": false,
+            "Tags": [
+                "UI"
+            ],
+            "DependIDs": [
+                1,
+                3
+            ]
+        },
+        {
+            "BundleName": "assets_assetraw_ui_level3.bundle",
+            "UnityCRC": 1732367313,
+            "FileHash": "cc3f8b3aa0eccac60fdff77a85f20485",
+            "FileCRC": "2403d41e",
+            "FileSize": 7290,
+            "Encrypted": false,
+            "Tags": [
+                "UI"
+            ],
+            "DependIDs": [
+                4
+            ]
+        },
+        {
+            "BundleName": "assets_assetraw_ui_level4.bundle",
+            "UnityCRC": 185462860,
+            "FileHash": "1f6156e2ed9bee3b46e8f660be35fd47",
+            "FileCRC": "6cb91bc5",
+            "FileSize": 5953,
+            "Encrypted": false,
+            "Tags": [
+                "UI"
+            ],
+            "DependIDs": [
+                5
+            ]
+        },
+        {
+            "BundleName": "assets_assetraw_ui_levelcommon.bundle",
+            "UnityCRC": 3796093492,
+            "FileHash": "2d59caf886d70bafb5624c4ed055852d",
+            "FileCRC": "0ec8edfe",
+            "FileSize": 7219,
+            "Encrypted": false,
+            "Tags": [
+                "UI"
+            ],
+            "DependIDs": [
+                1
+            ]
+        }
+    ]
+}

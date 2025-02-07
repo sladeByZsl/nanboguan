@@ -72,6 +72,14 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+    "com.unity.ide.cursor": {
+      "version": "file:com.unity.ide.cursor-master",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      }
+    },
     "com.unity.ide.rider": {
       "version": "3.0.28",
       "depth": 0,

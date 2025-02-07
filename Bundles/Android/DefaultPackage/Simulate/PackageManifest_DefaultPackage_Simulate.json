@@ -18,8 +18,26 @@
             "BundleID": 0
         },
         {
+            "Address": "leftArrow",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/leftArrow.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
             "Address": "red_button",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/red_button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "rightArrow",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/rightArrow.png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -361,6 +379,16 @@
             "BundleID": 6
         },
         {
+            "Address": "i18n_tbi18l",
+            "AssetPath": "Assets/AssetRaw/Configs/bytes/i18n_tbi18l.bytes",
+            "AssetGUID": "",
+            "AssetTags": [
+                "Configs",
+                "WEBGL_PRELOAD"
+            ],
+            "BundleID": 7
+        },
+        {
             "Address": "item_tbitem",
             "AssetPath": "Assets/AssetRaw/Configs/bytes/item_tbitem.bytes",
             "AssetGUID": "",
@@ -414,6 +442,15 @@
                 "UI"
             ],
             "BundleID": 12
+        },
+        {
+            "Address": "Trigger1",
+            "AssetPath": "Assets/AssetRaw/UI/Trigger1.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 13
         }
     ],
     "BundleList": [
@@ -422,7 +459,7 @@
             "UnityCRC": 0,
             "FileHash": "2ac8f46b7ca74022181a1279590bd595",
             "FileCRC": "00000000",
-            "FileSize": 24073,
+            "FileSize": 26014,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -432,7 +469,7 @@
             "UnityCRC": 0,
             "FileHash": "525e3c70591cfc3846d5f98a259571ce",
             "FileCRC": "00000000",
-            "FileSize": 2616671,
+            "FileSize": 2612733,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -492,7 +529,7 @@
             "UnityCRC": 0,
             "FileHash": "afd1e050fc3c0e8abaab7271a9ea01c4",
             "FileCRC": "00000000",
-            "FileSize": 149,
+            "FileSize": 331,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -502,7 +539,7 @@
             "UnityCRC": 0,
             "FileHash": "6951d60d076757fb3f6b107d8ac5e130",
             "FileCRC": "00000000",
-            "FileSize": 18569,
+            "FileSize": 16356,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -512,7 +549,7 @@
             "UnityCRC": 0,
             "FileHash": "872342b3c8764cd6f40a27568babb4ef",
             "FileCRC": "00000000",
-            "FileSize": 15552,
+            "FileSize": 31144,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -522,7 +559,7 @@
             "UnityCRC": 0,
             "FileHash": "fe525f67cf37bbfb1641941826a3c878",
             "FileCRC": "00000000",
-            "FileSize": 20045,
+            "FileSize": 20023,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -532,7 +569,7 @@
             "UnityCRC": 0,
             "FileHash": "d59d3b4e10d980f00e84770e68a59393",
             "FileCRC": "00000000",
-            "FileSize": 11806,
+            "FileSize": 11790,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -542,7 +579,17 @@
             "UnityCRC": 0,
             "FileHash": "0d8444d5b75e7187a47605c1ac43bdae",
             "FileCRC": "00000000",
-            "FileSize": 25595,
+            "FileSize": 25596,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_ui_trigger1.bundle",
+            "UnityCRC": 0,
+            "FileHash": "0b50dda5329f323be8636cb623c0b180",
+            "FileCRC": "00000000",
+            "FileSize": 2185,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
