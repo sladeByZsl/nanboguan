@@ -31,7 +31,7 @@ namespace GameLogic
             BagManager.Instance.AddItem(10000);
             m_btnGloves.gameObject.SetActive(false);
 
-            Log.Error(LocalizationManager.Instance.GetText(Global.Key_level2_tips));
+            //Log.Error(LocalizationManager.Instance.GetText(Global.Key_level2_tips));
             // if (itemId < 10005)
             // {
             //     BagManager.Instance.AddItem(itemId);

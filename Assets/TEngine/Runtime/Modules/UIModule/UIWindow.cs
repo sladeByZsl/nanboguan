@@ -423,11 +423,11 @@ namespace TEngine
                 throw new Exception($"Not found {nameof(Canvas)} in panel {WindowName}");
             }
 
-            _autoFade=panel.GetComponent<AutoFade>();
-            if (_autoFade==null)
-            {
-                _autoFade=panel.AddComponent<AutoFade>();
-            }
+            // _autoFade=panel.GetComponent<AutoFade>();
+            // if (_autoFade==null)
+            // {
+            //     _autoFade=panel.AddComponent<AutoFade>();
+            // }
             
 
             _canvas.overrideSorting = true;
