@@ -23,6 +23,10 @@ namespace TEngine
 
         void OnEnable()
         {
+            if (canvasGroup == null)
+            {
+                return;
+            }
             DOTween.To(() => canvasGroup.alpha, x => canvasGroup.alpha = x, 1, fadeInDuration).OnComplete(delegate()
             {
                 //Debug.Log("透明度变化完成");
@@ -31,6 +35,10 @@ namespace TEngine
 
         void OnDisable()
         {
+            if (canvasGroup == null)
+            {
+                return;
+            }
             DOTween.To(() => canvasGroup.alpha, x => canvasGroup.alpha = x, 0, fadeOutDuration).OnComplete(delegate()
             {
                 //Debug.Log("透明度变化完成");

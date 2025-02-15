@@ -8,14 +8,14 @@ namespace GameLogic
     public class Level4 : UIWindow
     {
         #region 脚本工具生成的代码
-        private Button m_btnRight;
         private Button m_btnLeft;
+        private Button m_btnRight;
         protected override void ScriptGenerator()
         {
-            m_btnRight = FindChildComponent<Button>("m_btnRight");
-            m_btnLeft = FindChildComponent<Button>("m_btnLeft");
-            m_btnRight.onClick.AddListener(OnClickRightBtn);
+            m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
+            m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
             m_btnLeft.onClick.AddListener(OnClickLeftBtn);
+            m_btnRight.onClick.AddListener(OnClickRightBtn);
         }
         #endregion
 
