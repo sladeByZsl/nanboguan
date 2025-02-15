@@ -23,6 +23,7 @@ namespace GameLogic
         public void OnBeginDrag(PointerEventData eventData)
         {
             // 可以在这里添加开始拖拽的视觉效果
+            //m_canvas.sortingLayerName = Global.UI_TOP;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -32,6 +33,7 @@ namespace GameLogic
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            //m_canvas.sortingLayerName = Global.UI;
             m_parent.OnItemDragEnd(m_itemIndex, eventData);
         }
     }

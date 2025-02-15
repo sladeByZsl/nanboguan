@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI)]
+    [Window(UILayer.Top)]
     public class LevelCommon : UIWindow
     {
         private List<int> m_itemList = new List<int>();  // 存储所有道具ID
@@ -116,17 +116,22 @@ namespace GameLogic
             Vector2 originalPos = itemIndex == 0 ? m_item1OriginalPos : m_item2OriginalPos;
             
             // 检查是否触碰到带特定Tag的UI
-            if (IsPointerOverTaggedUI(eventData))
+            if (IsPointerOverTaggedUI(eventData,Global.TRIGGER_TAG_1))
             {
-                int realItemIndex = m_currentIndex + itemIndex;
-                if (realItemIndex < m_itemList.Count)
-                {
-                    int itemId = m_itemList[realItemIndex];
-                    // 触发物品使用事件
-                    TriggerItemUse(itemId);
-                }
+                GameEvent.Send(ClientEventID.UseItem1,Global.Cfg_Item_Sticker);
+                // int realItemIndex = m_currentIndex + itemIndex;
+                // if (realItemIndex < m_itemList.Count)
+                // {
+                //     int itemId = m_itemList[realItemIndex];
+                //  
+                //     // 触发物品使用事件
+                //     //TriggerItemUse(itemId);
+                // }
             }
-            
+            else if (IsPointerOverTaggedUI(eventData,Global.TRIGGER_TAG_1))
+            {
+            }
+
             // 无论如何都要返回原位
             targetImage.rectTransform.anchoredPosition = originalPos;
         }
@@ -137,15 +142,18 @@ namespace GameLogic
             Log.Debug("UseItem:"+itemId);
         }
 
-        private bool IsPointerOverTaggedUI(PointerEventData eventData)
+        private bool IsPointerOverTaggedUI(PointerEventData eventData,int Layer)
         {
             var results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventData, results);
 
             foreach (var result in results)
             {
-                if (result.gameObject.layer == Global.TRIGGER_TAG)
+                if (result.gameObject.activeSelf && result.gameObject.layer == Layer)
+                {
+                    //Debug.LogError("Point:"+result.gameObject.name+",active:"+result.gameObject.activeSelf);
                     return true;
+                }
             }
 
             return false;

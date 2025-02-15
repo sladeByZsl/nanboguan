@@ -117,6 +117,15 @@
             "BundleID": 1
         },
         {
+            "Address": "Item_New",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_New.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
             "Address": "Item_Origin",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Item_Origin.png",
             "AssetGUID": "",
@@ -135,8 +144,26 @@
             "BundleID": 1
         },
         {
+            "Address": "Level1_task",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/Level1_task.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
             "Address": "menu",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/menu.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "NPC機器人(1)",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/NPC機器人(1).png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -200,6 +227,33 @@
         {
             "Address": "下箭头按下",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/下箭头按下.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "口_不說(1)",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/口_不說(1).png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "口_說話(1)",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/口_說話(1).png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 1
+        },
+        {
+            "Address": "尋機頭_答案(1)",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/ToolList/尋機頭_答案(1).png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -444,13 +498,22 @@
             "BundleID": 12
         },
         {
+            "Address": "LevelTips",
+            "AssetPath": "Assets/AssetRaw/UI/LevelTips.prefab",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UI"
+            ],
+            "BundleID": 13
+        },
+        {
             "Address": "Trigger1",
             "AssetPath": "Assets/AssetRaw/UI/Trigger1.prefab",
             "AssetGUID": "",
             "AssetTags": [
                 "UI"
             ],
-            "BundleID": 13
+            "BundleID": 14
         }
     ],
     "BundleList": [
@@ -469,7 +532,7 @@
             "UnityCRC": 0,
             "FileHash": "525e3c70591cfc3846d5f98a259571ce",
             "FileCRC": "00000000",
-            "FileSize": 2612733,
+            "FileSize": 3025782,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -529,7 +592,7 @@
             "UnityCRC": 0,
             "FileHash": "afd1e050fc3c0e8abaab7271a9ea01c4",
             "FileCRC": "00000000",
-            "FileSize": 331,
+            "FileSize": 480,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -539,7 +602,7 @@
             "UnityCRC": 0,
             "FileHash": "6951d60d076757fb3f6b107d8ac5e130",
             "FileCRC": "00000000",
-            "FileSize": 16356,
+            "FileSize": 37167,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -549,7 +612,7 @@
             "UnityCRC": 0,
             "FileHash": "872342b3c8764cd6f40a27568babb4ef",
             "FileCRC": "00000000",
-            "FileSize": 31182,
+            "FileSize": 26589,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -559,7 +622,7 @@
             "UnityCRC": 0,
             "FileHash": "fe525f67cf37bbfb1641941826a3c878",
             "FileCRC": "00000000",
-            "FileSize": 20031,
+            "FileSize": 20037,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -580,6 +643,16 @@
             "FileHash": "0d8444d5b75e7187a47605c1ac43bdae",
             "FileCRC": "00000000",
             "FileSize": 25596,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "assets_assetraw_ui_leveltips.bundle",
+            "UnityCRC": 0,
+            "FileHash": "0c9fef152d7145634163f58ea0002dda",
+            "FileCRC": "00000000",
+            "FileSize": 6822,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

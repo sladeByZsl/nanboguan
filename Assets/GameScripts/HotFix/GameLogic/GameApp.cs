@@ -40,6 +40,7 @@ public partial class GameApp:Singleton<GameApp>
     {
         GameModule.UI.ShowUI<Level1>();
         GameModule.UI.ShowUI<LevelCommon>();
+        GameModule.UI.ShowUI<LevelTips>();
     }
 
     /// <summary>
