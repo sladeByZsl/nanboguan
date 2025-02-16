@@ -79,6 +79,7 @@ SpriteAtlas:
     - {fileID: 21300000, guid: beada9dca179e4f4f86af3bafe77ba91, type: 3}
     - {fileID: 21300000, guid: 967763536baf2e3459bbd3570b40a51d, type: 3}
     - {fileID: 21300000, guid: fd275a063b8f83b4abe93952dbfdde8f, type: 3}
+    - {fileID: 21300000, guid: 6f7cbcac9758fb544bb16e84296bb407, type: 3}
     - {fileID: 21300000, guid: b43ba8c359bba08428e8153712e77440, type: 3}
     - {fileID: 21300000, guid: b1c8949878b20da4cbc42924485d9f03, type: 3}
     - {fileID: 21300000, guid: abd7905ddf497a64ebafe29d82d364bf, type: 3}
@@ -139,6 +140,7 @@ SpriteAtlas:
     - baebdedb2f450c14f8cea6e244688ba0: 21300000
     - 4921fc4c467018145827a56be9e59673: 21300000
     - a4476b8cd15edc845bf30bb302f515df: 21300000
+    - 6f7cbcac9758fb544bb16e84296bb407: 21300000
     - beada9dca179e4f4f86af3bafe77ba91: 21300000
     - 8db9ba0d3f2e5d9438e2b183f9024fe6: 21300000
     - abd7905ddf497a64ebafe29d82d364bf: 21300000
@@ -177,6 +179,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: baebdedb2f450c14f8cea6e244688ba0, type: 3}
   - {fileID: 21300000, guid: 4921fc4c467018145827a56be9e59673, type: 3}
   - {fileID: 21300000, guid: a4476b8cd15edc845bf30bb302f515df, type: 3}
+  - {fileID: 21300000, guid: 6f7cbcac9758fb544bb16e84296bb407, type: 3}
   - {fileID: 21300000, guid: beada9dca179e4f4f86af3bafe77ba91, type: 3}
   - {fileID: 21300000, guid: 8db9ba0d3f2e5d9438e2b183f9024fe6, type: 3}
   - {fileID: 21300000, guid: abd7905ddf497a64ebafe29d82d364bf, type: 3}
@@ -214,6 +217,7 @@ SpriteAtlas:
   - "\u672A\u547D\u540D\u7684\u4F5C\u54C1-7"
   - "\u4E0A\u7BAD\u5934"
   - "\u672A\u547D\u540D\u7684\u4F5C\u54C1"
+  - R2_answer
   - Item_Sticker
   - "\u4E0A\u7BAD\u5934\u4E0D\u53EF\u7528"
   - dialoguebox

@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TEngine;
+using DG.Tweening;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI)]
+    [Window(UILayer.UI,hideTimeToClose:0)]
     public class Level4 : UIWindow
     {
         #region 脚本工具生成的代码
@@ -20,6 +21,13 @@ namespace GameLogic
         #endregion
 
         #region 事件
+
+
+        protected override void OnRefresh()
+        {
+           
+        }
+
         private void OnClickRightBtn()
         {
             
@@ -29,6 +37,22 @@ namespace GameLogic
             GameModule.UI.HideUI<Level4>();
             GameModule.UI.ShowUI<Level3>();
         }
+
+        protected override void RegisterEvent()
+        {
+            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
+
+        private void OnUseItem(int id)
+        {
+            if (!BagManager.Instance.IsItemUsed(id) && id == Global.Cfg_Item_Doorknob)
+            {
+                BagManager.Instance.UseItem(id);
+                GameModule.UI.HideUI<Level4>();
+                GameModule.UI.ShowUI<LevelFinish>();
+            }
+        }
+
         #endregion
 
     }

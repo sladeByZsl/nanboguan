@@ -132,6 +132,10 @@ namespace GameLogic
             {
                 GameEvent.Send(ClientEventID.UseItem,Global.Cfg_Item_Gloves);
             }
+            else if (IsPointerOverTaggedUI(eventData,Global.TRIGGER_TAG_3))
+            {
+                GameEvent.Send(ClientEventID.UseItem,Global.Cfg_Item_Doorknob);
+            }
 
             // 无论如何都要返回原位
             targetImage.rectTransform.anchoredPosition = originalPos;

@@ -14,6 +14,9 @@ namespace GameLogic
 
         public static string Key_level1_tips = "level1_tips";
         public static string Key_level2_tips = "level2_tips";
+        public static string Key_level2_liekai_tips = "level2_tips_liekai";
+        public static string Key_level2_tips_wrong_tips = "level2_tips_wrong";
+        
         public static string Key_item_new = "Item_New";
 
         public static string UI = "UI";
@@ -23,9 +26,11 @@ namespace GameLogic
         public const int Cfg_Item_Gloves = 10000;
         public const int Cfg_Item_Sticker = 10001;
         public const int Cfg_Item_Origin = 10002;
-        public const int Cfg_Item_Doorknob = 10003;
+        public const int Cfg_Item_Doorknob = 10003;//门扳手
         public const int Cfg_Item_Brick = 10004;//砖头
 
-      
+
+
+        public static bool Level2Right = false;
     }
 }
