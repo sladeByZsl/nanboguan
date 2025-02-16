@@ -39,3 +39,4 @@ Thumbs.db
 # These should be ignored by default global gitignore, but from time to time we got these from packages or other sources*.unitypackage
 *.so
 /HybridCLRData
+/Build/Android

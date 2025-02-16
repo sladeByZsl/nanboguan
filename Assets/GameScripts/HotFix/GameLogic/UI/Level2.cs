@@ -125,6 +125,11 @@ namespace GameLogic
             {
                 m_btnDoorknob.gameObject.SetActive(false);
             }
+
+            if (BagManager.Instance.HasItem(Global.Cfg_Item_Sticker))
+            {
+                m_imgBottom.SetSprite(Global.Key_item_new);
+            }
         }
 
         protected override void RegisterEvent()

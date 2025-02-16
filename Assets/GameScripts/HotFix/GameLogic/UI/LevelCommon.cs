@@ -139,14 +139,6 @@ namespace GameLogic
             if (IsPointerOverTaggedUI(eventData, Global.TRIGGER_TAG_1))
             {
                 GameEvent.Send(ClientEventID.UseItem, Global.Cfg_Item_Sticker);
-                // int realItemIndex = m_currentIndex + itemIndex;
-                // if (realItemIndex < m_itemList.Count)
-                // {
-                //     int itemId = m_itemList[realItemIndex];
-                //  
-                //     // 触发物品使用事件
-                //     //TriggerItemUse(itemId);
-                // }
             }
             else if (IsPointerOverTaggedUI(eventData, Global.TRIGGER_TAG_2))
             {

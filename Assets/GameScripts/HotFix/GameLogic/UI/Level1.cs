@@ -70,6 +70,16 @@ namespace GameLogic
         {
             //Debug.LogError("show:"+BagManager.Instance.IsItemUsed(Global.Cfg_Item_Sticker));
             m_btnBack.gameObject.SetActive(false);
+
+            if (BagManager.Instance.IsCanAdd(Global.Cfg_Item_Gloves))
+            {
+                m_btnGloves.gameObject.SetActive(true);
+            }
+            else
+            {
+                m_btnGloves.gameObject.SetActive(false);
+            }
+
             if (BagManager.Instance.IsItemUsed(Global.Cfg_Item_Sticker))
             {
                 m_goNoTalk.SetActive(false);
@@ -78,11 +88,11 @@ namespace GameLogic
                 
                 if (BagManager.Instance.IsItemUsed(Global.Cfg_Item_Brick))
                 {
-                    m_btnBrick.gameObject.SetActive(true);
+                    m_btnBrick.gameObject.SetActive(false);
                 }
                 else
                 {
-                    m_btnBrick.gameObject.SetActive(false);
+                    m_btnBrick.gameObject.SetActive(true);
                 }
             }
             else

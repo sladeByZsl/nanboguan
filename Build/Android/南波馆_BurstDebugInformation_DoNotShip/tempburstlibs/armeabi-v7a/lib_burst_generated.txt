@@ -13,7 +13,6 @@ Library: G:\unityProject\nanboguan\nanboguan-game\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Assembly-CSharp-firstpass;
 --assembly-defines=Assembly-CSharp;
 --assembly-defines=Unity.MemoryProfiler;
---assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=HybridCLR.Runtime;
 --assembly-defines=TEngine.Runtime;
 --assembly-defines=GameProto;
@@ -22,6 +21,7 @@ Library: G:\unityProject\nanboguan\nanboguan-game\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Unity.AI.Navigation;
 --assembly-defines=Unity.Burst;
 --assembly-defines=YooAsset;
+--assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=UniTask.TextMeshPro;
 --assembly-defines=Unity.ScriptableBuildPipeline;
 --assembly-defines=UniTask.DOTween;
@@ -36,8 +36,8 @@ Library: G:\unityProject\nanboguan\nanboguan-game\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Unity.Mathematics;
 --assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.RenderPipelines.Universal.Shaders;
---assembly-defines=DOTween.Modules;
 --assembly-defines=UniTask;
+--assembly-defines=DOTween.Modules;
 --assembly-defines=Sirenix.Serialization;
 --assembly-defines=DemiLib;
 --assembly-defines=Sirenix.Serialization.Config;
@@ -91,7 +91,6 @@ Library: G:\unityProject\nanboguan\nanboguan-game\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Assembly-CSharp-firstpass;
 --assembly-defines=Assembly-CSharp;
 --assembly-defines=Unity.MemoryProfiler;
---assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=HybridCLR.Runtime;
 --assembly-defines=TEngine.Runtime;
 --assembly-defines=GameProto;
@@ -100,6 +99,7 @@ Library: G:\unityProject\nanboguan\nanboguan-game\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Unity.AI.Navigation;
 --assembly-defines=Unity.Burst;
 --assembly-defines=YooAsset;
+--assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=UniTask.TextMeshPro;
 --assembly-defines=Unity.ScriptableBuildPipeline;
 --assembly-defines=UniTask.DOTween;
@@ -114,8 +114,8 @@ Library: G:\unityProject\nanboguan\nanboguan-game\Temp\BurstOutput\tempburstlibs
 --assembly-defines=Unity.Mathematics;
 --assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.RenderPipelines.Universal.Shaders;
---assembly-defines=DOTween.Modules;
 --assembly-defines=UniTask;
+--assembly-defines=DOTween.Modules;
 --assembly-defines=Sirenix.Serialization;
 --assembly-defines=DemiLib;
 --assembly-defines=Sirenix.Serialization.Config;

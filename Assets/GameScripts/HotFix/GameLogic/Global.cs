@@ -24,7 +24,7 @@ namespace GameLogic
 
 
         public const int Cfg_Item_Gloves = 10000;
-        public const int Cfg_Item_Sticker = 10001;
+        public const int Cfg_Item_Sticker = 10001;//贴纸
         public const int Cfg_Item_Origin = 10002;
         public const int Cfg_Item_Doorknob = 10003;//门扳手
         public const int Cfg_Item_Brick = 10004;//砖头

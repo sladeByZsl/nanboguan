@@ -14,17 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuildinFiles:
   - PackageName: DefaultPackage
+    FileName: assets_assetraw_audios_56ba5fbbb76000fd459019f446410469.bundle
+    FileCRC32: 6ac7fdd8
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_audios_music_ae73d2779f7d35503137ba7a8465bc01.bundle
+    FileCRC32: 04d3ec13
+  - PackageName: DefaultPackage
     FileName: assets_assetraw_configs_24ed8d7ba90817d02cfd4fc8c65ab767.bundle
     FileCRC32: 39981346
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_configs_bytes_db85d5f0a3540e865209a86b0e9bd970.bundle
-    FileCRC32: d85d19e5
+    FileName: assets_assetraw_configs_bytes_32e2e4236bac066f2fc4b1c38a123882.bundle
+    FileCRC32: 9fad5267
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_uiraw_atlas_common_6e1ead6d5bd0f360b9e9c675ad9725d2.bundle
-    FileCRC32: 0790b86f
+    FileName: assets_assetraw_uiraw_atlas_common_72b3e031bf1f874c2df14c7cf578d966.bundle
+    FileCRC32: 95f4907c
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_uiraw_atlas_toollist_8fe1b1847f718195c1ecfd92376a7a80.bundle
-    FileCRC32: 8329de28
+    FileName: assets_assetraw_uiraw_atlas_toollist_dedfaefbfe4c997f5737d62c0a605945.bundle
+    FileCRC32: 611ad61c
   - PackageName: DefaultPackage
     FileName: assets_assetraw_uiraw_raw_room1_3f3f1affab36441a9ea57c85dbfb0b99.bundle
     FileCRC32: b1443e27
@@ -38,17 +44,26 @@ MonoBehaviour:
     FileName: assets_assetraw_uiraw_raw_room4_a41d0fdd792693420da05f1b78d7b79f.bundle
     FileCRC32: 7d273c1a
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_ui_level1_1c0cab0aae1f11999ca4f8e24448d8e9.bundle
-    FileCRC32: d02c853a
+    FileName: assets_assetraw_ui_level1_7a13cc627bc9db73f8c988a5731397f9.bundle
+    FileCRC32: cbfbdd62
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_ui_level2_c963e711d6db99575994d8f035941acf.bundle
-    FileCRC32: daa01161
+    FileName: assets_assetraw_ui_level2_4ed25d665840466640b11b1291c580ba.bundle
+    FileCRC32: 3f2bcfe6
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_ui_level3_b75673eb65f0d39c91383f0f64d5d2ba.bundle
-    FileCRC32: 667d84b4
+    FileName: assets_assetraw_ui_level3_54607f8e38479af2b5505f3b1c439615.bundle
+    FileCRC32: d55ef79a
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_ui_level4_ca3d3a575751043d36e380353619b5dc.bundle
-    FileCRC32: c1ee21bc
+    FileName: assets_assetraw_ui_level4_712ffe141f40835ac9b44efef1e2291b.bundle
+    FileCRC32: c89e62a0
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_ui_levelcommon_b5dffdbe70beac3583207af1a50d226d.bundle
-    FileCRC32: 27acb872
+    FileName: assets_assetraw_ui_levelcommon_ef48c0a7550b39d6cb6eae44925f779c.bundle
+    FileCRC32: 93eb1335
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_ui_levelfinish_7b113617764f3d3ce1b820c22740c5e2.bundle
+    FileCRC32: 49632c74
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_ui_leveltips_0516aa62f9dbe400fb99f14a991ddfd6.bundle
+    FileCRC32: 014c727b
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_ui_trigger1_b3df6b4eeb118cd56b20796c81b69fc7.bundle
+    FileCRC32: 240b5dea
