@@ -5,6 +5,7 @@ using TEngine;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using System.Threading;
+using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
@@ -62,11 +63,13 @@ namespace GameLogic
 
         private void OnClickShowBackGroudBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             m_btnBackgroud.gameObject.SetActive(true);
         }
         
         private void OnClickDoorknobBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             if (BagManager.Instance.IsCanAdd(Global.Cfg_Item_Doorknob))
             {
                 BagManager.Instance.AddItem(Global.Cfg_Item_Doorknob);
@@ -77,6 +80,7 @@ namespace GameLogic
         
         private void OnClickInputOKBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             if (m_input1.text=="0"&&m_input2.text=="4"&&m_input3.text=="1"&&m_input4.text=="0")
             {
                 GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_liekai_tips);
@@ -93,6 +97,7 @@ namespace GameLogic
 
         private void OnClickBackgroudBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             m_btnBackgroud.gameObject.SetActive(false);
         }
 
@@ -139,28 +144,33 @@ namespace GameLogic
 
         private void OnClickRightBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<Level2>();
             GameModule.UI.ShowUI<Level3>();
         }
 
         private void OnClickLeftBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<Level2>();
             GameModule.UI.ShowUI<Level1>();
         }
 
         private void OnClickItem1Btn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_tips);
         }
 
         private void OnClickItem2Btn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_tips);
         }
 
         private void OnClickItem3Btn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_tips);
         }
 
@@ -168,11 +178,8 @@ namespace GameLogic
         
         private void OnClickBottleBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_tips);
-            // if (BagManager.Instance.HasItem())
-            // {
-            // }
-           
         }
 
         protected override void OnDestroy()

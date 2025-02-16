@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TEngine;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
@@ -35,6 +37,7 @@ namespace GameLogic
         {
             //m_canvas.sortingLayerName = Global.UI;
             m_parent.OnItemDragEnd(m_itemIndex, eventData);
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
         }
     }
 }

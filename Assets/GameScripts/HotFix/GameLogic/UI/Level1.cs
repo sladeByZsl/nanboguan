@@ -2,6 +2,7 @@ using GameConfig.item;
 using UnityEngine;
 using UnityEngine.UI;
 using TEngine;
+using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
@@ -46,6 +47,7 @@ namespace GameLogic
         
         private void OnClickBrickBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             if (BagManager.Instance.IsCanAdd(Global.Cfg_Item_Brick))
             {
                 BagManager.Instance.AddItem(Global.Cfg_Item_Brick);
@@ -55,10 +57,12 @@ namespace GameLogic
 
         private void OnClickBackBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             m_btnBack.gameObject.SetActive(false);
         }
         private void OnClickShowTaskBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             m_btnBack.gameObject.SetActive(true);
         }
 
@@ -92,6 +96,7 @@ namespace GameLogic
 
         private void OnClickGlovesBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             if(BagManager.Instance.IsCanAdd(Global.Cfg_Item_Gloves)) 
             {
                 BagManager.Instance.AddItem(Global.Cfg_Item_Gloves);
@@ -113,12 +118,13 @@ namespace GameLogic
         }
         private void OnClickRightBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<Level1>();
             GameModule.UI.ShowUI<Level2>();
         }
         private void OnClickLeftBtn()
         {
-           
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
         }
         #endregion
 

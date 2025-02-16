@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TEngine;
 using DG.Tweening;
-
+using AudioType = TEngine.AudioType;
 namespace GameLogic
 {
     [Window(UILayer.UI,hideTimeToClose:0)]
@@ -30,10 +30,11 @@ namespace GameLogic
 
         private void OnClickRightBtn()
         {
-            
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
         }
         private void OnClickLeftBtn()
         {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<Level4>();
             GameModule.UI.ShowUI<Level3>();
         }
