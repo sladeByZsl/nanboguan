@@ -24,7 +24,7 @@ namespace GameLogic
         public const int Cfg_Item_Sticker = 10001;
         public const int Cfg_Item_Origin = 10002;
         public const int Cfg_Item_Doorknob = 10003;
-        public const int Cfg_Item_Brick = 10004;
+        public const int Cfg_Item_Brick = 10004;//砖头
 
       
     }

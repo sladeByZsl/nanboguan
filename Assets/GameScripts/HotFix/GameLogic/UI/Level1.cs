@@ -18,6 +18,7 @@ namespace GameLogic
         private GameObject m_go_Talk;
         private Button m_btnBack;
         private GameObject m_goTrigger1;
+        private Button m_btnBrick;
         protected override void ScriptGenerator()
         {
             m_btnGloves = FindChildComponent<Button>("Bg/m_btnGloves");
@@ -29,15 +30,28 @@ namespace GameLogic
             m_go_Talk = FindChild("Bg/Image/m_go_Talk").gameObject;
             m_btnBack = FindChildComponent<Button>("Bg/m_btnBack");
             m_goTrigger1 = FindChild("Bg/m_btnBack/bg/m_goTrigger1").gameObject;
+            m_btnBrick = FindChildComponent<Button>("Bg/m_btnBrick");
             m_btnGloves.onClick.AddListener(OnClickGlovesBtn);
             m_btnRight.onClick.AddListener(OnClickRightBtn);
             m_btnLeft.onClick.AddListener(OnClickLeftBtn);
             m_btnShowTask.onClick.AddListener(OnClickShowTaskBtn);
             m_btnBack.onClick.AddListener(OnClickBackBtn);
+            m_btnBrick.onClick.AddListener(OnClickBrickBtn);
         }
+
         #endregion
 
         #region 事件
+
+        
+        private void OnClickBrickBtn()
+        {
+            if (BagManager.Instance.IsCanAdd(Global.Cfg_Item_Brick))
+            {
+                BagManager.Instance.AddItem(Global.Cfg_Item_Brick);
+                m_btnBrick.gameObject.SetActive(false);
+            }
+        }
 
         private void OnClickBackBtn()
         {
@@ -57,12 +71,22 @@ namespace GameLogic
                 m_goNoTalk.SetActive(false);
                 m_go_Talk.SetActive(true);
                 m_goAnswer.SetActive(true);
+                
+                if (BagManager.Instance.IsItemUsed(Global.Cfg_Item_Brick))
+                {
+                    m_btnBrick.gameObject.SetActive(true);
+                }
+                else
+                {
+                    m_btnBrick.gameObject.SetActive(false);
+                }
             }
             else
             {
                 m_goNoTalk.SetActive(true);
                 m_go_Talk.SetActive(false);
                 m_goAnswer.SetActive(false);
+                m_btnBrick.gameObject.SetActive(false);
             }
         }
 
@@ -101,16 +125,19 @@ namespace GameLogic
         protected override void RegisterEvent()
         {
             AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
-            AddUIEvent<int>(ClientEventID.UseItem1,OnUseItem1);
+            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
         }
 
-        private void OnUseItem1(int id)
+        private void OnUseItem(int id)
         {
-            if (!BagManager.Instance.IsItemUsed(id))
+            if (!BagManager.Instance.IsItemUsed(id)&&id==Global.Cfg_Item_Sticker)
             {
                 BagManager.Instance.UseItem(id);
                 m_btnBack.gameObject.SetActive(false);
                 m_goAnswer.SetActive(true);
+                m_goNoTalk.SetActive(false);
+                m_go_Talk.SetActive(true);
+                m_btnBrick.gameObject.SetActive(true);
                 GameEvent.Send(ClientEventID.ShowTips,Global.Key_level1_tips);
             }
         }

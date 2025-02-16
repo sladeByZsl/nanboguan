@@ -41,11 +41,27 @@ namespace GameLogic
         protected override void BindMemberProperty()
         {
             m_imgBottom=m_btnBottle.GetComponent<Image>();
+            
         }
 
         protected override void OnRefresh()
         {
             base.OnRefresh();
+        }
+
+        protected override void RegisterEvent()
+        {
+            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
+
+        private void OnUseItem(int id)
+        {
+            if (!BagManager.Instance.IsItemUsed(id) && id == Global.Cfg_Item_Gloves)
+            {
+                BagManager.Instance.UseItem(id);
+                BagManager.Instance.AddItem(Global.Cfg_Item_Sticker);
+                m_imgBottom.SetSprite(Global.Key_item_new);
+            }
         }
 
         private void OnClickRightBtn()
@@ -79,11 +95,11 @@ namespace GameLogic
         
         private void OnClickBottleBtn()
         {
-            if(BagManager.Instance.IsCanAdd(Global.Cfg_Item_Sticker))
-            {
-                BagManager.Instance.AddItem(Global.Cfg_Item_Sticker);
-                m_imgBottom.SetSprite(Global.Key_item_new);
-            }
+            GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_tips);
+            // if (BagManager.Instance.HasItem())
+            // {
+            // }
+           
         }
 
         protected override void OnDestroy()

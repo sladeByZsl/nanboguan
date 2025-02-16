@@ -118,7 +118,7 @@ namespace GameLogic
             // 检查是否触碰到带特定Tag的UI
             if (IsPointerOverTaggedUI(eventData,Global.TRIGGER_TAG_1))
             {
-                GameEvent.Send(ClientEventID.UseItem1,Global.Cfg_Item_Sticker);
+                GameEvent.Send(ClientEventID.UseItem,Global.Cfg_Item_Sticker);
                 // int realItemIndex = m_currentIndex + itemIndex;
                 // if (realItemIndex < m_itemList.Count)
                 // {
@@ -128,8 +128,9 @@ namespace GameLogic
                 //     //TriggerItemUse(itemId);
                 // }
             }
-            else if (IsPointerOverTaggedUI(eventData,Global.TRIGGER_TAG_1))
+            else if (IsPointerOverTaggedUI(eventData,Global.TRIGGER_TAG_2))
             {
+                GameEvent.Send(ClientEventID.UseItem,Global.Cfg_Item_Gloves);
             }
 
             // 无论如何都要返回原位

@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 8343915160746442654}
   - component: {fileID: 1410400046510527910}
   - component: {fileID: 920244965874185890}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: m_btnBottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
