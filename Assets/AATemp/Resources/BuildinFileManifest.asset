@@ -44,8 +44,11 @@ MonoBehaviour:
     FileName: assets_assetraw_uiraw_raw_room4_a41d0fdd792693420da05f1b78d7b79f.bundle
     FileCRC32: 7d273c1a
   - PackageName: DefaultPackage
-    FileName: assets_assetraw_ui_level1_7a13cc627bc9db73f8c988a5731397f9.bundle
-    FileCRC32: cbfbdd62
+    FileName: assets_assetraw_ui_contactpanel_574b99ac9b1322b8012158da68c02e51.bundle
+    FileCRC32: 53b9e8c1
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_ui_level1_1129d7056dc80e06ea579b88b55cdf9e.bundle
+    FileCRC32: 6bf31508
   - PackageName: DefaultPackage
     FileName: assets_assetraw_ui_level2_4ed25d665840466640b11b1291c580ba.bundle
     FileCRC32: 3f2bcfe6
@@ -64,6 +67,12 @@ MonoBehaviour:
   - PackageName: DefaultPackage
     FileName: assets_assetraw_ui_leveltips_0516aa62f9dbe400fb99f14a991ddfd6.bundle
     FileCRC32: 014c727b
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_ui_loginpanel_0179fbd1a3671107e495e350aaa2afa9.bundle
+    FileCRC32: 2a725401
+  - PackageName: DefaultPackage
+    FileName: assets_assetraw_ui_settingpanel_bf558fa5e561fb56baa454d4a2512ad2.bundle
+    FileCRC32: f6b890b5
   - PackageName: DefaultPackage
     FileName: assets_assetraw_ui_trigger1_b3df6b4eeb118cd56b20796c81b69fc7.bundle
     FileCRC32: 240b5dea

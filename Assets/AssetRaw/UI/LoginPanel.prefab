@@ -567,8 +567,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6936662471693356803}
-  - component: {fileID: 2593722054861612487}
-  - component: {fileID: 102806644124783072}
   - component: {fileID: 1204362146729814876}
   m_Layer: 5
   m_Name: btnRoot
@@ -599,44 +597,6 @@ RectTransform:
   m_AnchoredPosition: {x: 642, y: 155}
   m_SizeDelta: {x: 257.037, y: 420.6714}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2593722054861612487
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6511115648793746754}
-  m_CullTransparentMesh: 1
---- !u!114 &102806644124783072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6511115648793746754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &1204362146729814876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +714,7 @@ GameObject:
   - component: {fileID: 4104896441049219082}
   - component: {fileID: 2434505045903402578}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Des
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,7 +780,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: contact_us
 --- !u!1 &7111311514038385308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1340,7 @@ GameObject:
   - component: {fileID: 150776887608229456}
   - component: {fileID: 1196544044149467493}
   - component: {fileID: 5358620019851713313}
-  - component: {fileID: 1585506923296743873}
+  - component: {fileID: 8714559859806244131}
   m_Layer: 5
   m_Name: m_btnContanctUs
   m_TagString: Untagged
@@ -1446,7 +1406,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1585506923296743873
+--- !u!114 &8714559859806244131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1455,7 +1415,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9116587224173260108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 8382437f28929134c9d30039d0e79f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1490,3 +1450,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  generalSoundName: UI_Button_Click_General
+  btnText: contact_us
+  button_cd: 0.2
+  msg_key: 
+  m_cd_mask: {fileID: 0}
+  m_cd_text: {fileID: 0}
