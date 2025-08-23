@@ -64,5 +64,11 @@ namespace GameLogic
         {
             return !itemList.Contains(itemId) && !IsItemUsed(itemId);
         }
+
+        public void Clear()
+        {
+            itemList.Clear();
+            useItemDict.Clear();
+        }
     }
 }

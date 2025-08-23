@@ -10,11 +10,18 @@ public class LocalizationManager : Singleton<LocalizationManager>
     public LocalizationManager()
     {
         int local_language= PlayerPrefs.GetInt("Language", 1);
-        if (local_language == 1)
+        SetLan(local_language);
+    }
+
+
+
+    public void SetLan(int localLanguage)
+    {
+        if (localLanguage == 1)
         {
             language=Language.English;
         }
-        else if (local_language == 2)
+        else if (localLanguage == 2)
         {
             language=Language.ChineseSimplified;
         }
@@ -23,9 +30,7 @@ public class LocalizationManager : Singleton<LocalizationManager>
             language=Language.ChineseTraditional;
         }
     }
-    
-    
-    
+
     public string GetText(string key)
     {
         var data = ConfigSystem.Instance.Tables.TbI18L.GetOrDefault(key);

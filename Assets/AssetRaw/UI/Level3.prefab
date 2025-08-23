@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 5113554760425015200}
   - component: {fileID: 7021865871354648327}
   - component: {fileID: 826436845041326118}
+  - component: {fileID: 1291515129086000156}
   m_Layer: 5
   m_Name: m_text2
   m_TagString: Untagged
@@ -277,6 +278,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u8ACB\u4F9D\u7167CDAB\u7684\u9806\u5E8F\u5831\u51FA\u5927\u5BB6\u76F2\u62BD\u5230\u7684\u65E9\u9910\u865F\u78BC\u3002\r"
+--- !u!114 &1291515129086000156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750918063145261040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae2491f0d9a070488da661194c1c097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: level3_2
 --- !u!1 &5209503556980216318
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +382,7 @@ GameObject:
   - component: {fileID: 3513091452142090290}
   - component: {fileID: 5495788827039824258}
   - component: {fileID: 4948811233732355927}
+  - component: {fileID: 446486818487285304}
   m_Layer: 5
   m_Name: m_text1
   m_TagString: Untagged
@@ -438,6 +453,19 @@ MonoBehaviour:
   m_Text: "\u4E00\u5171\u67095\u7A2E\u65E9\u9910\uFF0C\u6BCF\u7A2E\u65E9\u9910\u53EA\u67092\u4EFD\uFF0C\u65E9\u9910\u865F\u78BC\u5982\u4E0B\n0\u865F\uFF1A\u897F\u5F0F\u65E9\u9910\n1\u865F\uFF1A\u5305\u5B50\n2\u865F\uFF1A\u6CB9\u689D\n3\u865F\uFF1A\u71B1\u4E7E\u9EB5\n4\u865F\uFF1A\u7389\u7C73\n\r\u4E00\u5171\u67094\u500B\u4EBA\uFF08A,
     B, C, D)\n\n\u6BCF\u4EBA\u67092\u4EFD\u65E9\u9910\uFF0C\u81EA\u9078\u4E00\u4EFD\uFF0C\u518D\u76F2\u62BD\u4E00\u4EFD\n\n\r\u81EA\u9078\uFF1AA\uFF1A3
     ; B\uFF1A2 ; C\uFF1A4 ; D\uFF1A1\r"
+--- !u!114 &446486818487285304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080863961191272189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae2491f0d9a070488da661194c1c097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: level3_1
 --- !u!1 &6508061878325343995
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +597,7 @@ GameObject:
   - component: {fileID: 1627967609462858678}
   - component: {fileID: 2617850165956749705}
   - component: {fileID: 769911722097523153}
+  - component: {fileID: 2657108208089340641}
   m_Layer: 5
   m_Name: m_text3
   m_TagString: Untagged
@@ -641,3 +670,16 @@ MonoBehaviour:
     \u770B\u5230 B \u548C D \u5206\u5225\u62BD\u5230\u8207\u81EA\u5DF1\u76F8\u540C\u7684\u65E9\u9910\uFF0C\u4E14
     B \u548C D \u4E4B\u9593\u6C92\u6709\u76F8\u540C\u7684\u65E9\u9910\n\n4.B \u62BD\u4ED6\u4E0D\u559C\u6B61\u5403\u7684\u897F\u9910\uFF0C\u5C31\u8DDF
     A \u63DB\u4E86"
+--- !u!114 &2657108208089340641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283247530272037056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae2491f0d9a070488da661194c1c097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: level3_3

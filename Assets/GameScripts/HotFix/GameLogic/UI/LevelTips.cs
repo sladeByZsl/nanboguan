@@ -8,7 +8,7 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.Tips)]
+    [Window(UILayer.Tips,hideTimeToClose:0)]
     public class LevelTips : UIWindow
     {
         private CanvasGroup m_tipCanvasGroup;

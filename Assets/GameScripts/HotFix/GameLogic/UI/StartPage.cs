@@ -4,7 +4,7 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI)]
+    [Window(UILayer.UI,hideTimeToClose:0)]
     class StartPage : UIWindow
     {
         #region 脚本工具生成的代码
@@ -55,13 +55,13 @@ namespace GameLogic
             Debug.Log("About Click");
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<StartPage>();
-
             GameModule.UI.ShowUI<AboutPage>();
         }
 
         private void OnClickStartGameBtn()
         {
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
+            GameModule.UI.HideUI<StartPage>();
             GameModule.UI.ShowUI<Level1>();
             GameModule.UI.ShowUI<LevelCommon>();
             GameModule.UI.ShowUI<LevelTips>();
@@ -69,11 +69,8 @@ namespace GameLogic
         private void OnClickSettingsBtn()
         {
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
+            GameModule.UI.HideUI<StartPage>();
             GameModule.UI.ShowUI<SettingPanel>();
-            
-            GameModule.UI.HideUI<Level1>();
-            GameModule.UI.HideUI<LevelCommon>();
-            GameModule.UI.HideUI<LevelTips>();
         }
         #endregion
 

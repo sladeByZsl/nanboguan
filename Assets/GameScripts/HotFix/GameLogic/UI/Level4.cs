@@ -51,6 +51,8 @@ namespace GameLogic
             {
                 BagManager.Instance.UseItem(id);
                 GameModule.UI.HideUI<Level4>();
+                GameModule.UI.HideUI<LevelCommon>();
+                GameModule.UI.HideUI<LevelTips>();
                 GameModule.UI.ShowUI<LevelFinish>();
             }
         }

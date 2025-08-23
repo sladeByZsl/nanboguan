@@ -5,7 +5,7 @@ using DG.Tweening;
 
 namespace GameLogic
 {
-    [Window(UILayer.System)]
+    [Window(UILayer.UI,hideTimeToClose:0)]
     public class LevelFinish : UIWindow
     {
         #region 脚本工具生成的代码
@@ -26,6 +26,12 @@ namespace GameLogic
 
         private void OnClickBackGroundBtn()
         {
+            if (desIndex>=6)
+            {
+                BagManager.Instance.Clear();
+                GameModule.UI.HideUI<LevelFinish>();
+                GameModule.UI.ShowUI<StartPage>();
+            }
             // 如果正在播放动画或已达到最大提示数，则不响应点击
             if (isAnimating || desIndex >= 6)
             {

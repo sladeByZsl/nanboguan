@@ -4,7 +4,7 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI)]
+    [Window(UILayer.UI,hideTimeToClose:0)]
     class AboutPage : UIWindow
     {
         #region 脚本工具生成的代码

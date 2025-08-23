@@ -116,6 +116,12 @@ namespace GameLogic
             //m_btnDownArrow.interactable = m_currentIndex < m_itemList.Count - 2;
         }
 
+        protected override void OnRefresh()
+        {
+            base.OnRefresh();
+            OnRefreshItem(0);
+        }
+
         private void OnRefreshItem(int itemID)
         {
             //Debug.LogError(itemID);
@@ -130,7 +136,7 @@ namespace GameLogic
             // 在这里实现根据itemID设置图片的逻辑
             imgComponent.sprite = GameModule.Resource.LoadAsset<Sprite>(tbItem.Icon);
             obj.SetActive(true);
-            txt.text = tbItem.Name;
+            txt.text = LocalizationManager.Instance.GetText(tbItem.Name);
         }
 
         private void SetItemDefault(Image imgComponent,GameObject obj)

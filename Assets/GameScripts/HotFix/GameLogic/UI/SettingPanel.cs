@@ -4,7 +4,7 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI)]
+    [Window(UILayer.UI,hideTimeToClose:0)]
     class SettingPanel : UIWindow
     {
         #region 脚本工具生成的代码
@@ -162,6 +162,7 @@ namespace GameLogic
         {
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
             PlayerPrefs.SetInt("Language",1);//英语
+            LocalizationManager.Instance.SetLan(1);
             ShowLanguage(1);
             
         }
@@ -169,12 +170,14 @@ namespace GameLogic
         {
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
             PlayerPrefs.SetInt("Language",2);//中文简体
+            LocalizationManager.Instance.SetLan(2);
             ShowLanguage(2);
         }
         private void OnClickZHBtn()
         {
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
             PlayerPrefs.SetInt("Language",3);//中文繁体
+            LocalizationManager.Instance.SetLan(3);
             ShowLanguage(3);
         }
         #endregion
