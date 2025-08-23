@@ -135,6 +135,11 @@ namespace GameLogic
         private void OnClickLeftBtn()
         {
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
+            GameModule.UI.HideUI<Level1>();
+            GameModule.UI.HideUI<LevelCommon>();
+            GameModule.UI.HideUI<LevelTips>();
+            
+            GameModule.UI.ShowUI<StartPage>();
         }
         #endregion
 

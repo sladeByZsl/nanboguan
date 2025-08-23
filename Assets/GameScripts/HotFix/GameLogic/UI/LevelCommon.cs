@@ -8,7 +8,7 @@ using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
-    [Window(UILayer.Top)]
+    [Window(UILayer.Top,hideTimeToClose:0)]
     public class LevelCommon : UIWindow
     {
         private List<int> m_itemList = new List<int>(); // 存储所有道具ID
