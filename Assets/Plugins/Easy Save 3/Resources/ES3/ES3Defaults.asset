@@ -38,6 +38,9 @@ MonoBehaviour:
     - GameLogic
     - GameProto
     - HybridCLR.Runtime
+    - OSA.Core
+    - OSA.Demos
+    - OSA.Utilities
     - TEngine.Runtime
     - UniTask
     - UniTask.Addressables
