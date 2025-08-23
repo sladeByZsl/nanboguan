@@ -40,6 +40,16 @@ namespace GameLogic
             }
         }
 
+        public int GetItemIDByIndex(int index)
+        {
+            if (index<itemList.Count)
+            {
+                return itemList[index];
+            }
+
+            return -1;
+        }
+
         public bool HasItem(int itemId)
         {
             return itemList.Contains(itemId);

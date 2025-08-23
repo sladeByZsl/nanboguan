@@ -46,6 +46,7 @@ namespace GameLogic
 
         private void OnUseItem(int id)
         {
+            Debug.Log("Level4:"+id);
             if (!BagManager.Instance.IsItemUsed(id) && id == Global.Cfg_Item_Doorknob)
             {
                 BagManager.Instance.UseItem(id);
