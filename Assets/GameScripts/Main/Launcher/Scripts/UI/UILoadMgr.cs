@@ -7,7 +7,7 @@ namespace GameMain
     public class UIDefine
     {
         public static readonly string UILoadUpdate = "UILoadUpdate";
-        //public static readonly string UILoadTip = "UILoadTip";
+        public static readonly string UILoadTip = "UILoadTip";
     }
 
     public static class UILoadMgr
@@ -27,7 +27,7 @@ namespace GameMain
             }
 
             _uiMap.Add(UIDefine.UILoadUpdate, typeof(UILoadUpdate));
-            //_uiMap.Add(UIDefine.UILoadTip, typeof(UILoadTip));
+            _uiMap.Add(UIDefine.UILoadTip, typeof(UILoadTip));
             GameModule.UI.ShowUI<UILoadUpdate>();
             _isInit = true;
         }
@@ -56,7 +56,7 @@ namespace GameMain
         /// </summary>
         public static void HideAll()
         {
-            //GameModule.UI.CloseUI<UILoadTip>();
+            GameModule.UI.CloseUI<UILoadTip>();
             GameModule.UI.CloseUI<UILoadUpdate>();
         }
     }

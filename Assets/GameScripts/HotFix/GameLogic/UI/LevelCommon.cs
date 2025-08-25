@@ -29,16 +29,16 @@ namespace GameLogic
         private Button m_btnDownArrow;
         protected override void ScriptGenerator()
         {
-            m_btnUpArrow = FindChildComponent<Button>("m_btnUpArrow");
-            m_go_bg1 = FindChild("item1/m_go_bg1").gameObject;
-            m_imgItem1 = FindChildComponent<Image>("item1/m_imgItem1");
-            m_go_textBg1 = FindChild("item1/m_go_textBg1").gameObject;
-            m_textTitle1 = FindChildComponent<Text>("item1/m_go_textBg1/m_textTitle1");
-            m_go_bg2 = FindChild("item2/m_go_bg2").gameObject;
-            m_imgItem2 = FindChildComponent<Image>("item2/m_imgItem2");
-            m_go_textBg2 = FindChild("item2/m_go_textBg2").gameObject;
-            m_textTitle2 = FindChildComponent<Text>("item2/m_go_textBg2/m_textTitle2");
-            m_btnDownArrow = FindChildComponent<Button>("m_btnDownArrow");
+            m_btnUpArrow = FindChildComponent<Button>("Bg/m_btnUpArrow");
+            m_go_bg1 = FindChild("Bg/item1/m_go_bg1").gameObject;
+            m_imgItem1 = FindChildComponent<Image>("Bg/item1/m_imgItem1");
+            m_go_textBg1 = FindChild("Bg/item1/m_go_textBg1").gameObject;
+            m_textTitle1 = FindChildComponent<Text>("Bg/item1/m_go_textBg1/m_textTitle1");
+            m_go_bg2 = FindChild("Bg/item2/m_go_bg2").gameObject;
+            m_imgItem2 = FindChildComponent<Image>("Bg/item2/m_imgItem2");
+            m_go_textBg2 = FindChild("Bg/item2/m_go_textBg2").gameObject;
+            m_textTitle2 = FindChildComponent<Text>("Bg/item2/m_go_textBg2/m_textTitle2");
+            m_btnDownArrow = FindChildComponent<Button>("Bg/m_btnDownArrow");
             m_btnUpArrow.onClick.AddListener(OnClickUpArrowBtn);
             m_btnDownArrow.onClick.AddListener(OnClickDownArrowBtn);
         }

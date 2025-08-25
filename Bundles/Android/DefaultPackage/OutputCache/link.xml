@@ -5,6 +5,7 @@
   <assembly fullname="GameLogic, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="ExMultilanguage" preserve="all" />
     <type fullname="GameLogic.ImageAnimation" preserve="all" />
+    <type fullname="GameLogic.ItemDragHandler" preserve="all" />
     <type fullname="GameLogic.UI_Control_ScrollFlow" preserve="all" />
     <type fullname="GameLogic.UI_Control_ScrollFlow_Item" preserve="all" />
   </assembly>
@@ -35,6 +36,7 @@
     <type fullname="Com.TheFallenGames.OSA.CustomAdapters.DateTimePicker.MyParams" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="TEngine.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="TEngine.AssetsReference" preserve="all" />
     <type fullname="TEngine.AutoFade" preserve="all" />
     <type fullname="TEngine.ExButton" preserve="all" />
   </assembly>
