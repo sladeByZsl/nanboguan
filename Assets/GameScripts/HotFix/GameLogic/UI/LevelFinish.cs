@@ -29,6 +29,7 @@ namespace GameLogic
             if (desIndex>=6)
             {
                 BagManager.Instance.Clear();
+                Global.Level2Right = false;
                 GameModule.UI.HideUI<LevelFinish>();
                 GameModule.UI.ShowUI<StartPage>();
             }
