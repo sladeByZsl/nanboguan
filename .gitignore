@@ -40,3 +40,4 @@ Thumbs.db
 *.so
 /HybridCLRData
 /Build/Android
+/Bundles
