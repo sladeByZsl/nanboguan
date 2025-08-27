@@ -4,7 +4,7 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI,hideTimeToClose:0)]
+    [Window(UILayer.System,hideTimeToClose:0)]
     class SettingPanel : UIWindow
     {
         #region 脚本工具生成的代码
@@ -43,7 +43,7 @@ namespace GameLogic
         {
             GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<SettingPanel>();
-            GameModule.UI.ShowUI<StartPage>();
+            //GameModule.UI.ShowUI<StartPage>();
         }
 
         private void OnClickMusicOnBtn()

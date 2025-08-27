@@ -8,7 +8,7 @@ using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
-    [Window(UILayer.Top,hideTimeToClose:0)]
+    [Window(UILayer.System,hideTimeToClose:99999)]
     public class LevelCommon : UIWindow
     {
         private List<int> m_itemList = new List<int>(); // 存储所有道具ID
@@ -27,6 +27,7 @@ namespace GameLogic
         private GameObject m_go_textBg2;
         private Text m_textTitle2;
         private Button m_btnDownArrow;
+        private Button m_btnMenu;
         protected override void ScriptGenerator()
         {
             m_btnUpArrow = FindChildComponent<Button>("Bg/m_btnUpArrow");
@@ -39,9 +40,12 @@ namespace GameLogic
             m_go_textBg2 = FindChild("Bg/item2/m_go_textBg2").gameObject;
             m_textTitle2 = FindChildComponent<Text>("Bg/item2/m_go_textBg2/m_textTitle2");
             m_btnDownArrow = FindChildComponent<Button>("Bg/m_btnDownArrow");
+            m_btnMenu = FindChildComponent<Button>("Bg/m_btnMenu");
             m_btnUpArrow.onClick.AddListener(OnClickUpArrowBtn);
             m_btnDownArrow.onClick.AddListener(OnClickDownArrowBtn);
+            m_btnMenu.onClick.AddListener(OnClickMenuBtn);
         }
+
         #endregion
 
         #region 事件
@@ -66,6 +70,13 @@ namespace GameLogic
                 UpdateItemDisplay();
             }
         }
+        
+        
+        private void OnClickMenuBtn()
+        {
+            GameModule.UI.ShowUI<SettingPanel>();
+        }
+
 
         private void OnClickDownArrowBtn()
         {

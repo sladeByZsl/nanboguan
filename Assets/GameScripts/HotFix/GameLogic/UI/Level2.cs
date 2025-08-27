@@ -24,7 +24,8 @@ namespace GameLogic
         private Button m_btnItem1;
         private Button m_btnItem2;
         private Button m_btnItem3;
-        private GameObject m_goAnswer;
+        private GameObject m_goAnswerTi;
+        private GameObject m_goAnswerAnswer;
         private Button m_btnBottle;
         private Button m_btnShowBackGroud;
         private Button m_btnDoorknob;
@@ -37,7 +38,8 @@ namespace GameLogic
             m_btnItem1 = FindChildComponent<Button>("Bg/m_btnItem1");
             m_btnItem2 = FindChildComponent<Button>("Bg/m_btnItem2");
             m_btnItem3 = FindChildComponent<Button>("Bg/m_btnItem3");
-            m_goAnswer = FindChild("Bg/m_goAnswer").gameObject;
+            m_goAnswerTi = FindChild("Bg/m_goAnswerTi").gameObject;
+            m_goAnswerAnswer = FindChild("Bg/m_goAnswerAnswer").gameObject;
             m_btnBottle = FindChildComponent<Button>("Bg/m_btnBottle");
             m_btnShowBackGroud = FindChildComponent<Button>("Bg/m_btnShowBackGroud");
             m_btnDoorknob = FindChildComponent<Button>("Bg/m_btnDoorknob");
@@ -53,16 +55,20 @@ namespace GameLogic
             m_btnDoorknob.onClick.AddListener(OnClickDoorknobBtn);
             m_btnBackgroud.onClick.AddListener(OnClickBackgroudBtn);
             m_btnInputOK.onClick.AddListener(OnClickInputOKBtn);
-            
-            m_loopingSpinner1=FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num1");
-            m_loopingSpinner2=FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num2");
-            m_loopingSpinner3=FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num3");
-            m_loopingSpinner4=FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num4");
         }
         #endregion
 
         #region 事件
-        
+
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+            m_loopingSpinner1= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num1");
+            m_loopingSpinner2= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num2");
+            m_loopingSpinner3= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num3");
+            m_loopingSpinner4= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num4");
+        }
+
         private void OnClickNum1Btn()
         {
            
@@ -107,11 +113,15 @@ namespace GameLogic
             
             if (index1==0&&index2==4&&index3==1&&index4==0)
             {
-                GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_liekai_tips);
-                m_btnBackgroud.gameObject.SetActive(false);
-                m_btnDoorknob.gameObject.SetActive(true);
-                m_goAnswer.SetActive(true);
-                Global.Level2Right = true;
+                if (!Global.Level2Right)
+                {
+                    GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_liekai_tips);
+                    m_btnBackgroud.gameObject.SetActive(false);
+                    m_btnDoorknob.gameObject.SetActive(true);
+                    m_goAnswerTi.SetActive(false);
+                    m_goAnswerAnswer.SetActive(true);
+                    Global.Level2Right = true;
+                }
             }
             else
             {
@@ -143,11 +153,13 @@ namespace GameLogic
             if (!Global.Level2Right)
             {
                 m_btnDoorknob.gameObject.SetActive(false);
-                m_goAnswer.SetActive(false);
+                m_goAnswerAnswer.SetActive(false);
+                m_goAnswerTi.SetActive(true);
             }
             else
             {
-                m_goAnswer.SetActive(true);
+                m_goAnswerAnswer.SetActive(true);
+                m_goAnswerTi.SetActive(false);
             }
 
             if (BagManager.Instance.IsItemUsed(Global.Cfg_Item_Doorknob))
