@@ -18,45 +18,47 @@ namespace GameLogic
         public LoopingSpinnerExample m_loopingSpinner2;
         public LoopingSpinnerExample m_loopingSpinner3;
         public LoopingSpinnerExample m_loopingSpinner4;
-        #region 脚本工具生成的代码
-        private Button m_btnRight;
-        private Button m_btnLeft;
-        private Button m_btnItem1;
-        private Button m_btnItem2;
-        private Button m_btnItem3;
-        private GameObject m_goAnswerTi;
-        private GameObject m_goAnswerAnswer;
-        private Button m_btnBottle;
-        private Button m_btnShowBackGroud;
-        private Button m_btnDoorknob;
-        private Button m_btnBackgroud;
-        private Button m_btnInputOK;
-        protected override void ScriptGenerator()
-        {
-            m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
-            m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
-            m_btnItem1 = FindChildComponent<Button>("Bg/m_btnItem1");
-            m_btnItem2 = FindChildComponent<Button>("Bg/m_btnItem2");
-            m_btnItem3 = FindChildComponent<Button>("Bg/m_btnItem3");
-            m_goAnswerTi = FindChild("Bg/m_goAnswerTi").gameObject;
-            m_goAnswerAnswer = FindChild("Bg/m_goAnswerAnswer").gameObject;
-            m_btnBottle = FindChildComponent<Button>("Bg/m_btnBottle");
-            m_btnShowBackGroud = FindChildComponent<Button>("Bg/m_btnShowBackGroud");
-            m_btnDoorknob = FindChildComponent<Button>("Bg/m_btnDoorknob");
-            m_btnBackgroud = FindChildComponent<Button>("Bg/m_btnBackgroud");
-            m_btnInputOK = FindChildComponent<Button>("Bg/m_btnBackgroud/m_btnInputOK");
-            m_btnRight.onClick.AddListener(OnClickRightBtn);
-            m_btnLeft.onClick.AddListener(OnClickLeftBtn);
-            m_btnItem1.onClick.AddListener(OnClickItem1Btn);
-            m_btnItem2.onClick.AddListener(OnClickItem2Btn);
-            m_btnItem3.onClick.AddListener(OnClickItem3Btn);
-            m_btnBottle.onClick.AddListener(OnClickBottleBtn);
-            m_btnShowBackGroud.onClick.AddListener(OnClickShowBackGroudBtn);
-            m_btnDoorknob.onClick.AddListener(OnClickDoorknobBtn);
-            m_btnBackgroud.onClick.AddListener(OnClickBackgroudBtn);
-            m_btnInputOK.onClick.AddListener(OnClickInputOKBtn);
-        }
-        #endregion
+        		#region 脚本工具生成的代码
+		private Button m_btnRight;
+		private Button m_btnLeft;
+		private Button m_btnItem1;
+		private Button m_btnItem2;
+		private Button m_btnItem3;
+		private GameObject m_goAnswerTi;
+		private GameObject m_goAnswerAnswer;
+		private Button m_btnBottle;
+		private Button m_btnShowBackGroud;
+		private Button m_btnDoorknob;
+		private GameObject m_goBackgroud;
+		private Button m_btnInputOK;
+		private Button m_btnReturn;
+		protected override void ScriptGenerator()
+		{
+			m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
+			m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
+			m_btnItem1 = FindChildComponent<Button>("Bg/m_btnItem1");
+			m_btnItem2 = FindChildComponent<Button>("Bg/m_btnItem2");
+			m_btnItem3 = FindChildComponent<Button>("Bg/m_btnItem3");
+			m_goAnswerTi = FindChild("Bg/m_goAnswerTi").gameObject;
+			m_goAnswerAnswer = FindChild("Bg/m_goAnswerAnswer").gameObject;
+			m_btnBottle = FindChildComponent<Button>("Bg/m_btnBottle");
+			m_btnShowBackGroud = FindChildComponent<Button>("Bg/m_btnShowBackGroud");
+			m_btnDoorknob = FindChildComponent<Button>("Bg/m_btnDoorknob");
+			m_goBackgroud = FindChild("Bg/m_goBackgroud").gameObject;
+			m_btnInputOK = FindChildComponent<Button>("Bg/m_goBackgroud/m_btnInputOK");
+			m_btnReturn = FindChildComponent<Button>("Bg/m_goBackgroud/m_btnReturn");
+			m_btnRight.onClick.AddListener(OnClickRightBtn);
+			m_btnLeft.onClick.AddListener(OnClickLeftBtn);
+			m_btnItem1.onClick.AddListener(OnClickItem1Btn);
+			m_btnItem2.onClick.AddListener(OnClickItem2Btn);
+			m_btnItem3.onClick.AddListener(OnClickItem3Btn);
+			m_btnBottle.onClick.AddListener(OnClickBottleBtn);
+			m_btnShowBackGroud.onClick.AddListener(OnClickShowBackGroudBtn);
+			m_btnDoorknob.onClick.AddListener(OnClickDoorknobBtn);
+			m_btnInputOK.onClick.AddListener(OnClickInputOKBtn);
+			m_btnReturn.onClick.AddListener(OnClickReturnBtn);
+		}
+		#endregion
 
         #region 事件
 
@@ -74,10 +76,16 @@ namespace GameLogic
            
         }
 
+        private void OnClickReturnBtn()
+        {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
+            m_goBackgroud.SetActive(false);
+        }
+
         private void OnClickShowBackGroudBtn()
         {
             GameModule.Audio.Play(AudioType.UISound, "Menu1A");
-            m_btnBackgroud.gameObject.SetActive(true);
+            m_goBackgroud.gameObject.SetActive(true);
         }
         
         private void OnClickDoorknobBtn()
@@ -116,7 +124,7 @@ namespace GameLogic
                 if (!Global.Level2Right)
                 {
                     GameEvent.Send(ClientEventID.ShowTips,Global.Key_level2_liekai_tips);
-                    m_btnBackgroud.gameObject.SetActive(false);
+                    m_goBackgroud.gameObject.SetActive(false);
                     m_btnDoorknob.gameObject.SetActive(true);
                     m_goAnswerTi.SetActive(false);
                     m_goAnswerAnswer.SetActive(true);
@@ -132,7 +140,7 @@ namespace GameLogic
         private void OnClickBackgroudBtn()
         {
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
-            m_btnBackgroud.gameObject.SetActive(false);
+            m_goBackgroud.gameObject.SetActive(false);
         }
 
         protected override void BindMemberProperty()
@@ -143,13 +151,14 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            Global.level_index = 2;
             base.OnRefresh();
             if (m_loopingSpinner1!=null&&m_loopingSpinner1.IsInitialized)
             {
                 Debug.Log("init list");
             }
 
-            m_btnBackgroud.gameObject.SetActive(false);
+            m_goBackgroud.gameObject.SetActive(false);
             if (!Global.Level2Right)
             {
                 m_btnDoorknob.gameObject.SetActive(false);

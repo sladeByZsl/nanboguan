@@ -41,9 +41,16 @@ namespace GameLogic
 
         private void OnClickBackBtn()
         {
-            GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
-            GameModule.UI.HideUI<SettingPanel>();
-            //GameModule.UI.ShowUI<StartPage>();
+            if (Global.level_index==0)
+            {
+                GameModule.UI.HideUI<SettingPanel>();
+                GameModule.UI.ShowUI<StartPage>();
+            }
+            else
+            {
+                GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
+                GameModule.UI.HideUI<SettingPanel>();
+            }
         }
 
         private void OnClickMusicOnBtn()

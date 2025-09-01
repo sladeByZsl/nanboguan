@@ -12,7 +12,7 @@ namespace GameLogic
         private Button m_btnLeft;
         private Text m_text1;
         private Text m_text2;
-        private Text m_text3;
+        private Text m_text3;       
         protected override void ScriptGenerator()
         {
             m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
@@ -37,6 +37,11 @@ namespace GameLogic
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<Level3>();
             GameModule.UI.ShowUI<Level2>();
+        }
+        protected override void OnRefresh()
+        {
+            Global.level_index = 3;
+            base.OnRefresh();
         }
         #endregion
 

@@ -32,5 +32,7 @@ namespace GameLogic
 
 
         public static bool Level2Right = false;
+
+        public static int level_index = 0;//gameStart
     }
 }

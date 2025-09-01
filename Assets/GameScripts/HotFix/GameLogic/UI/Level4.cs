@@ -25,7 +25,8 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
-           
+            Global.level_index = 4;
+            base.OnRefresh();
         }
 
         private void OnClickRightBtn()
