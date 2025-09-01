@@ -232,6 +232,10 @@ namespace TEngine.Editor
                 target = buildTarget,
                 options = BuildOptions.None
             };
+            EditorUserBuildSettings.buildAppBundle = true;
+             PlayerSettings.Android.minifyDebug = true;
+                PlayerSettings.Android.minifyRelease = true;
+                EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
             var report = BuildPipeline.BuildPlayer(buildPlayerOptions);
             BuildSummary summary = report.summary;
             if (summary.result == BuildResult.Succeeded)
