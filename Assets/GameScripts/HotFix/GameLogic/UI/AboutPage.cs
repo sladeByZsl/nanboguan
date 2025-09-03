@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TEngine;
+using System;
 
 namespace GameLogic
 {
@@ -31,9 +32,13 @@ namespace GameLogic
         }
         private void OnClickContactBtn()
         {
+            string email = "MISSLOCKYHK@GMAIL.COM";
+            Uri uri = new Uri(string.Format("mailto:{0}?subject={1}", email, Application.productName));
+            Application.OpenURL(uri.AbsoluteUri);
         }
         private void OnClickPrivacyBtn()
         {
+            Application.OpenURL("https://sites.google.com/view/misslocky-pp");
         }
         #endregion
 

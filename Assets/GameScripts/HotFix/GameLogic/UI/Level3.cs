@@ -7,23 +7,23 @@ namespace GameLogic
     [Window(UILayer.UI,hideTimeToClose:0)]
     public class Level3 : UIWindow
     {
-        #region 脚本工具生成的代码
-        private Button m_btnRight;
-        private Button m_btnLeft;
-        private Text m_text1;
-        private Text m_text2;
-        private Text m_text3;       
-        protected override void ScriptGenerator()
-        {
-            m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
-            m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
-            m_text1 = FindChildComponent<Text>("m_text1");
-            m_text2 = FindChildComponent<Text>("m_text2");
-            m_text3 = FindChildComponent<Text>("m_text3");
-            m_btnRight.onClick.AddListener(OnClickRightBtn);
-            m_btnLeft.onClick.AddListener(OnClickLeftBtn);
-        }
-        #endregion
+       	#region 脚本工具生成的代码
+		private GameObject m_goEn;
+		private GameObject m_goCN;
+		private GameObject m_goTR;
+		private Button m_btnRight;
+		private Button m_btnLeft;
+		protected override void ScriptGenerator()
+		{
+			m_goEn = FindChild("m_goEn").gameObject;
+			m_goCN = FindChild("m_goCN").gameObject;
+			m_goTR = FindChild("m_goTR").gameObject;
+			m_btnRight = FindChildComponent<Button>("m_btnRight");
+			m_btnLeft = FindChildComponent<Button>("m_btnLeft");
+			m_btnRight.onClick.AddListener(OnClickRightBtn);
+			m_btnLeft.onClick.AddListener(OnClickLeftBtn);
+		}
+		#endregion
 
         #region 事件
         private void OnClickRightBtn()
@@ -42,6 +42,24 @@ namespace GameLogic
         {
             Global.level_index = 3;
             base.OnRefresh();
+            if(LocalizationManager.Instance.language == Language.English)
+            {
+               m_goEn.SetActive(true);
+               m_goCN.SetActive(false);
+               m_goTR.SetActive(false);
+            }
+            else if(LocalizationManager.Instance.language == Language.ChineseSimplified)
+            {
+                m_goEn.SetActive(false);
+                m_goCN.SetActive(true);
+                m_goTR.SetActive(false);
+            }
+            else
+            {
+                m_goEn.SetActive(false);
+                m_goCN.SetActive(false);
+                m_goTR.SetActive(true);
+            }
         }
         #endregion
 

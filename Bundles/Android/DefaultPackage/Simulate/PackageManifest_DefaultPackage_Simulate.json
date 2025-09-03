@@ -27,6 +27,24 @@
             "BundleID": 0
         },
         {
+            "Address": "my_left",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/my_left.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "my_right",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/my_right.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
             "Address": "red_button",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/red_button.png",
             "AssetGUID": "",
@@ -477,6 +495,15 @@
             "BundleID": 3
         },
         {
+            "Address": "Contact Us_About Us",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/About/Contact Us_About Us.PNG",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 3
+        },
+        {
             "Address": "Content_About Us",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/About/Content_About Us.PNG",
             "AssetGUID": "",
@@ -488,6 +515,15 @@
         {
             "Address": "Logo_About us",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/About/Logo_About us.PNG",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 3
+        },
+        {
+            "Address": "Privacy Policy_About Us - 複製 (2)",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/About/Privacy Policy_About Us - 複製 (2).PNG",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -556,6 +592,15 @@
                 "UIRaw"
             ],
             "BundleID": 4
+        },
+        {
+            "Address": "About Us_Starting page - 複製",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/Other/About Us_Starting page - 複製.PNG",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 5
         },
         {
             "Address": "Airplane button_Starting page",
@@ -666,6 +711,33 @@
             "BundleID": 8
         },
         {
+            "Address": "Room3_English",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room3/Room3_English.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 8
+        },
+        {
+            "Address": "Room3_简体",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room3/Room3_简体.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 8
+        },
+        {
+            "Address": "Room3_繁體",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room3/Room3_繁體.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 8
+        },
+        {
             "Address": "R4_bg",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/room4/R4_bg.png",
             "AssetGUID": "",
@@ -729,6 +801,15 @@
             "BundleID": 10
         },
         {
+            "Address": "SettingBg",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/Settings/SettingBg.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 10
+        },
+        {
             "Address": "Snipaste_2025-08-24_00-43-05",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/Settings/Snipaste_2025-08-24_00-43-05.png",
             "AssetGUID": "",
@@ -749,6 +830,24 @@
         {
             "Address": "Snipaste_2025-08-24_00-51-41",
             "AssetPath": "Assets/AssetRaw/UIRaw/Raw/Settings/Snipaste_2025-08-24_00-51-41.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 10
+        },
+        {
+            "Address": "音效icon",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/Settings/音效icon.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 10
+        },
+        {
+            "Address": "音樂icon",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Raw/Settings/音樂icon.png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -1062,7 +1161,7 @@
             "UnityCRC": 0,
             "FileHash": "f0e8e15d0127ad74adc94e90d633d5ce",
             "FileCRC": "00000000",
-            "FileSize": 26014,
+            "FileSize": 33362,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1092,7 +1191,7 @@
             "UnityCRC": 0,
             "FileHash": "dd33cfdecbd1662a5863121800476c00",
             "FileCRC": "00000000",
-            "FileSize": 3265733,
+            "FileSize": 3211211,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1112,7 +1211,7 @@
             "UnityCRC": 0,
             "FileHash": "f745b344824bf18f029f83b348406c9e",
             "FileCRC": "00000000",
-            "FileSize": 548401,
+            "FileSize": 578203,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1142,7 +1241,7 @@
             "UnityCRC": 0,
             "FileHash": "2f5dfd8e3d3406f4c5169a922c0db2cb",
             "FileCRC": "00000000",
-            "FileSize": 314329,
+            "FileSize": 2016746,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1162,7 +1261,7 @@
             "UnityCRC": 0,
             "FileHash": "c1edf83d5718a1a70eb32181fde3d25a",
             "FileCRC": "00000000",
-            "FileSize": 3238220,
+            "FileSize": 3274255,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1212,7 +1311,7 @@
             "UnityCRC": 0,
             "FileHash": "26df31b0da9a5f544df5857fe70e36d8",
             "FileCRC": "00000000",
-            "FileSize": 16325,
+            "FileSize": 23176,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1262,7 +1361,7 @@
             "UnityCRC": 0,
             "FileHash": "adea79f9c7dc0098e1731347ad282ca2",
             "FileCRC": "00000000",
-            "FileSize": 21281,
+            "FileSize": 16423,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1382,7 +1481,7 @@
             "UnityCRC": 0,
             "FileHash": "c2286056e626aa6c1b2bf497b1481560",
             "FileCRC": "00000000",
-            "FileSize": 69610,
+            "FileSize": 72722,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1392,7 +1491,7 @@
             "UnityCRC": 0,
             "FileHash": "049bee831807644db51ae298e0036447",
             "FileCRC": "00000000",
-            "FileSize": 46707,
+            "FileSize": 46701,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

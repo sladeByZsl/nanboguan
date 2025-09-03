@@ -31,6 +31,8 @@ namespace GameLogic
 
         private void OnClickRightBtn()
         {
+            GameModule.UI.HideUI<Level4>();
+            GameModule.UI.ShowUI<Level1>();
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
         }
         private void OnClickLeftBtn()

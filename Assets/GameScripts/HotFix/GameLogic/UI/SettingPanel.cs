@@ -163,6 +163,7 @@ namespace GameLogic
                 Color srcColor2 = m_btnEnglish.GetComponent<Image>().color;
                 m_btnZH.GetComponent<Image>().color = new Color(srcColor.r,srcColor.g,srcColor.b,1);
             }
+            GameEvent.Send(ClientEventID.LanguageChanged);
         }
 
         private void OnClickEnglishBtn()

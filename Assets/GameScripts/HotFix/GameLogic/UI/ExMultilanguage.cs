@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameLogic;
 using TEngine;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,10 +14,22 @@ public class ExMultilanguage : MonoBehaviour
     private void Awake()
     {
         txt = this.GetComponent<Text>();
+        GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnLanguageChanged);
+    }
+
+    private void OnLanguageChanged()
+    {
+       OnRefresh();
     }
 
     private void OnEnable()
     {
+        OnRefresh();
+    }
+
+    private void OnRefresh()
+    {
+        Debug.LogError("OnRefresh:"+key);
         if(txt==null) return;
         txt.text = LocalizationManager.Instance.GetText(key);
     }
