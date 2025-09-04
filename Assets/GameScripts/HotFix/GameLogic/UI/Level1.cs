@@ -45,9 +45,25 @@ namespace GameLogic
 			m_btnReturn.onClick.AddListener(OnClickReturnBtn);
 			m_btnBrick.onClick.AddListener(OnClickBrickBtn);
 		}
-		#endregion
+        #endregion
 
         #region 事件
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+              AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
+            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
+
+        private void OnRefreshFont()
+        {
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
+            }
+        }
 
         private void OnClickReturnBtn()
         {
@@ -77,6 +93,8 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            base.OnRefresh();
+            OnRefreshFont();
             Global.level_index = 1;
             //Debug.LogError("show:"+BagManager.Instance.IsItemUsed(Global.Cfg_Item_Sticker));
             m_goBack.gameObject.SetActive(false);
@@ -157,12 +175,6 @@ namespace GameLogic
             GameModule.UI.ShowUI<Level4>();
         }
         #endregion
-
-        protected override void RegisterEvent()
-        {
-            AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
-            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
-        }
 
         private void OnUseItem(int id)
         {

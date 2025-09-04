@@ -42,6 +42,7 @@ namespace GameLogic
         {
             Global.level_index = 3;
             base.OnRefresh();
+             OnRefreshFont();
             if(LocalizationManager.Instance.language == Language.English)
             {
                m_goEn.SetActive(true);
@@ -59,6 +60,21 @@ namespace GameLogic
                 m_goEn.SetActive(false);
                 m_goCN.SetActive(false);
                 m_goTR.SetActive(true);
+            }
+        }
+
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+        }
+
+        private void OnRefreshFont()
+        {
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
             }
         }
         #endregion

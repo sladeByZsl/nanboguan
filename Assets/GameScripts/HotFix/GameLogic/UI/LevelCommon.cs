@@ -50,6 +50,24 @@ namespace GameLogic
 
         #region 事件
 
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+            AddUIEvent<int>(ClientEventID.AddItem, OnRefreshItem);
+            AddUIEvent<int>(ClientEventID.UseItem, OnRefreshItem);
+        }
+
+        private void OnRefreshFont()
+        {
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
+            }
+            UpdateItemDisplay();
+        }
+
         protected override void OnCreate()
         {
             m_imgItem1.gameObject.AddComponent<ItemDragHandler>().Init(this, 0);
@@ -89,13 +107,6 @@ namespace GameLogic
         }
 
         #endregion
-
-        protected override void RegisterEvent()
-        {
-            AddUIEvent<int>(ClientEventID.AddItem, OnRefreshItem);
-            AddUIEvent<int>(ClientEventID.UseItem, OnRefreshItem);
-        }
-
         private void UpdateItemDisplay()
         {
             // 更新第一个道具显示
@@ -131,6 +142,7 @@ namespace GameLogic
         {
             base.OnRefresh();
             OnRefreshItem(0);
+            OnRefreshFont();
         }
 
         private void OnRefreshItem(int itemID)

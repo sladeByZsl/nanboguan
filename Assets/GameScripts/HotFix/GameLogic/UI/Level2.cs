@@ -70,6 +70,21 @@ namespace GameLogic
             m_loopingSpinner3= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num3");
             m_loopingSpinner4= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num4");
         }
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
+
+        private void OnRefreshFont()
+        {
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
+            }
+        }
 
         private void OnClickNum1Btn()
         {
@@ -153,6 +168,7 @@ namespace GameLogic
         {
             Global.level_index = 2;
             base.OnRefresh();
+            OnRefreshFont();
             if (m_loopingSpinner1!=null&&m_loopingSpinner1.IsInitialized)
             {
                 Debug.Log("init list");
@@ -180,11 +196,6 @@ namespace GameLogic
             {
                 m_imgBottom.SetSprite(Global.Key_item_new);
             }
-        }
-
-        protected override void RegisterEvent()
-        {
-            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
         }
 
         private void OnUseItem(int id)

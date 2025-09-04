@@ -22,11 +22,27 @@ namespace GameLogic
 
         #region 事件
 
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+             AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
+
+        private void OnRefreshFont()
+        {
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
+            }
+        }
 
         protected override void OnRefresh()
         {
             Global.level_index = 4;
             base.OnRefresh();
+             OnRefreshFont();
         }
 
         private void OnClickRightBtn()
@@ -40,11 +56,6 @@ namespace GameLogic
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
             GameModule.UI.HideUI<Level4>();
             GameModule.UI.ShowUI<Level3>();
-        }
-
-        protected override void RegisterEvent()
-        {
-            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
         }
 
         private void OnUseItem(int id)

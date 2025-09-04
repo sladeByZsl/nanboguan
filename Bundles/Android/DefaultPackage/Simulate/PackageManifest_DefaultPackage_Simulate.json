@@ -1135,24 +1135,6 @@
                 "UI"
             ],
             "BundleID": 34
-        },
-        {
-            "Address": "ck",
-            "AssetPath": "Assets/AssetRaw/Fonts/ck.ttf",
-            "AssetGUID": "",
-            "AssetTags": [
-                "Fonts"
-            ],
-            "BundleID": 35
-        },
-        {
-            "Address": "eng",
-            "AssetPath": "Assets/AssetRaw/Fonts/eng.ttf",
-            "AssetGUID": "",
-            "AssetTags": [
-                "Fonts"
-            ],
-            "BundleID": 35
         }
     ],
     "BundleList": [
@@ -1502,16 +1484,6 @@
             "FileHash": "a03dd8f098fb356be3d6be3d38789c65",
             "FileCRC": "00000000",
             "FileSize": 2185,
-            "Encrypted": false,
-            "Tags": [],
-            "DependIDs": []
-        },
-        {
-            "BundleName": "assets_assetraw_fonts.bundle",
-            "UnityCRC": 0,
-            "FileHash": "79663a6c33ecf8c3da3dac1b391b78de",
-            "FileCRC": "00000000",
-            "FileSize": 16348420,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

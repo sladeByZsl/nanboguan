@@ -29,7 +29,7 @@ public class ExMultilanguage : MonoBehaviour
 
     private void OnRefresh()
     {
-        Debug.LogError("OnRefresh:"+key);
+        //Debug.LogError("OnRefresh:"+key);
         if(txt==null) return;
         txt.text = LocalizationManager.Instance.GetText(key);
     }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TEngine;
 using UnityEngine;
 
 namespace GameLogic
@@ -34,5 +35,35 @@ namespace GameLogic
         public static bool Level2Right = false;
 
         public static int level_index = 0;//gameStart
+
+        public static Font chineseFont;
+        public static Font englishFont;
+        public static bool fontsLoaded = false;
+
+        /// <summary>
+        /// 加载字体资源（只加载一次）
+        /// </summary>
+        public static void LoadFonts()
+        {
+            if (!fontsLoaded)
+            {
+                chineseFont = Resources.Load<Font>("Fonts/ck");
+                englishFont = Resources.Load<Font>("Fonts/eng");
+                fontsLoaded = true;
+            }
+        }
+
+        public static Font GetFont()
+        {
+            if (LocalizationManager.Instance.language == Language.ChineseSimplified || 
+                LocalizationManager.Instance.language == Language.ChineseTraditional)
+            {
+                return chineseFont;
+            }
+            else
+            {
+                return englishFont;
+            }
+        }
     }
 }
