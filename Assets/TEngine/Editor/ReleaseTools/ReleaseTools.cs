@@ -193,10 +193,10 @@ namespace TEngine.Editor
         private static string GetBuildPackageVersion()
         {
             int totalMinutes = DateTime.Now.Hour * 60 + DateTime.Now.Minute;
-            return DateTime.Now.ToString("yyyy-MM-dd") + "-" + totalMinutes;
+            return DateTime.Now.ToString("yyyy-MM-dd") + "-"+Application.version;
         }
 
-        [MenuItem("TEngine/Quick Build/一键打包Android", false, 90)]
+        [MenuItem("TEngine/Quick Build/一键打包Android正式包", false, 90)]
         public static void AutomationBuildAndroid()
         {
             BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
@@ -204,7 +204,7 @@ namespace TEngine.Editor
             AssetDatabase.Refresh();
             BuildInternal(target, outputRoot: Application.dataPath + "/../Bundles", packageVersion: GetBuildPackageVersion());
             AssetDatabase.Refresh();
-            BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/{GetBuildPackageVersion()}Android.apk");
+            BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/{GetBuildPackageVersion()}-{PlayerSettings.Android.bundleVersionCode}.aab");
             // BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/Android.apk");
         }
 
@@ -233,9 +233,14 @@ namespace TEngine.Editor
                 options = BuildOptions.None
             };
             EditorUserBuildSettings.buildAppBundle = true;
-             PlayerSettings.Android.minifyDebug = true;
-                PlayerSettings.Android.minifyRelease = true;
-                EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
+            PlayerSettings.Android.minifyDebug = true;
+            PlayerSettings.Android.minifyRelease = true;
+            var assetPath = Application.dataPath.Replace("Assets", "");
+            PlayerSettings.Android.keystoreName = assetPath+"key/user.keystore";
+            PlayerSettings.Android.keystorePass = "abc123";
+            PlayerSettings.Android.keyaliasName = "abc123";
+            PlayerSettings.Android.keyaliasPass = "abc123";
+            EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
             var report = BuildPipeline.BuildPlayer(buildPlayerOptions);
             BuildSummary summary = report.summary;
             if (summary.result == BuildResult.Succeeded)

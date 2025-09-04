@@ -15,11 +15,11 @@ namespace GameLogic
 		private Button m_btnLeft;
 		protected override void ScriptGenerator()
 		{
-			m_goEn = FindChild("m_goEn").gameObject;
-			m_goCN = FindChild("m_goCN").gameObject;
-			m_goTR = FindChild("m_goTR").gameObject;
-			m_btnRight = FindChildComponent<Button>("m_btnRight");
-			m_btnLeft = FindChildComponent<Button>("m_btnLeft");
+			m_goEn = FindChild("Image/m_goEn").gameObject;
+			m_goCN = FindChild("Image/m_goCN").gameObject;
+			m_goTR = FindChild("Image/m_goTR").gameObject;
+			m_btnRight = FindChildComponent<Button>("Image/m_btnRight");
+			m_btnLeft = FindChildComponent<Button>("Image/m_btnLeft");
 			m_btnRight.onClick.AddListener(OnClickRightBtn);
 			m_btnLeft.onClick.AddListener(OnClickLeftBtn);
 		}
