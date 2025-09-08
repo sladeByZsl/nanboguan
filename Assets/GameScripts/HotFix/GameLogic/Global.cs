@@ -55,8 +55,7 @@ namespace GameLogic
 
         public static Font GetFont()
         {
-            if (LocalizationManager.Instance.language == Language.ChineseSimplified || 
-                LocalizationManager.Instance.language == Language.ChineseTraditional)
+            if (LocalizationManager.Instance.language == Language.ChineseSimplified)
             {
                 return chineseFont;
             }
