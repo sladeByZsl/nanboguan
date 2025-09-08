@@ -8,7 +8,7 @@ using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
-    [Window(UILayer.Tips,hideTimeToClose:99999)]
+    [Window(UILayer.System,hideTimeToClose:0)]
     public class LevelCommon : UIWindow
     {
         private List<int> m_itemList = new List<int>(); // 存储所有道具ID
@@ -57,6 +57,24 @@ namespace GameLogic
             GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
             AddUIEvent<int>(ClientEventID.AddItem, OnRefreshItem);
             AddUIEvent<int>(ClientEventID.UseItem, OnRefreshItem);
+            AddUIEvent(ClientEventID.TimerAdd, OnRefreshTimer);
+        }
+
+        private void OnRefreshTimer()
+        {
+            if(Global.gameStart)
+            {
+                Global.gameSecond++;
+                m_textTime.text = FormatTime(Global.gameSecond);
+            }
+        }
+        
+        private string FormatTime(int totalSeconds)
+        {
+            int hours = totalSeconds / 3600;
+            int minutes = (totalSeconds % 3600) / 60;
+            int seconds = totalSeconds % 60;
+            return $"{hours:D2}:{minutes:D2}:{seconds:D2}";
         }
 
         private void OnRefreshFont()
@@ -94,6 +112,7 @@ namespace GameLogic
         private void OnClickMenuBtn()
         {
             GameModule.Audio.Play(AudioType.UISound, "Menu1A");
+            GameModule.UI.HideUI<LevelCommon>();
             GameModule.UI.CloseAll();
             GameModule.UI.ShowUI<StartPage>();
         }

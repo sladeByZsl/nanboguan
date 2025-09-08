@@ -198,6 +198,7 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            Global.gameStart = false;
             base.OnRefresh();
             if (PlayerPrefs.GetInt("Music",1)==1)
             {

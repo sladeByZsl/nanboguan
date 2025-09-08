@@ -40,9 +40,10 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            Global.gameStart = true;
             Global.level_index = 4;
             base.OnRefresh();
-             OnRefreshFont();
+            OnRefreshFont();
         }
 
         private void OnClickRightBtn()

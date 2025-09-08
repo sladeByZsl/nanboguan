@@ -93,6 +93,7 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            Global.gameStart = true;
             base.OnRefresh();
             OnRefreshFont();
             Global.level_index = 1;

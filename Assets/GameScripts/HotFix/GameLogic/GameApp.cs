@@ -42,6 +42,10 @@ public partial class GameApp:Singleton<GameApp>
         Global.LoadFonts();
         //GameModule.UI.HideUI<LoadingPanel>();
         GameModule.UI.ShowUI<StartPage>();
+        GameModule.Timer.AddTimer((arg) =>
+        {
+            GameEvent.Send(ClientEventID.TimerAdd);
+        },1.0f,true,false);
     }
 
     /// <summary>

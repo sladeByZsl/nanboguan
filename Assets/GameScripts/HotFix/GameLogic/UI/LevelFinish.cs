@@ -59,6 +59,7 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            Global.gameStart = false;
             string configKey = $"level4_tip{desIndex}";
             string tipText = LocalizationManager.Instance.GetText(configKey);
             m_textDes.text = tipText;

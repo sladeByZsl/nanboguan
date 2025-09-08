@@ -40,6 +40,9 @@ namespace GameLogic
         public static Font englishFont;
         public static bool fontsLoaded = false;
 
+        public static bool gameStart = false;
+        public static int gameSecond = 0;
+
         /// <summary>
         /// 加载字体资源（只加载一次）
         /// </summary>

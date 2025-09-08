@@ -84,6 +84,7 @@ namespace GameLogic
         protected override void OnRefresh()
         {
             Global.level_index = 0;
+            Global.gameStart = false;
             base.OnRefresh();
             OnRefreshFont();
             if (PlayerPrefs.GetInt("Music", 1) == 1)
