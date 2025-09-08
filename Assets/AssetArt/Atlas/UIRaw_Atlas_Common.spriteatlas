@@ -73,10 +73,14 @@ SpriteAtlas:
     packables:
     - {fileID: 21300000, guid: f9a06e163014f4f46b14f4499d3e7240, type: 3}
     - {fileID: 21300000, guid: b99dfc9c37b78d341a666342d08badad, type: 3}
+    - {fileID: 21300000, guid: f83951fb273da44b79f7bef0ad095ee0, type: 3}
     - {fileID: 21300000, guid: ed384a90067b649069629f33d6d41698, type: 3}
     - {fileID: 21300000, guid: 78d4e1e8303564295987bfbf57f93697, type: 3}
     - {fileID: 21300000, guid: 2761fc23b4aa7e34187ac5ffbc3fad9b, type: 3}
     - {fileID: 21300000, guid: b15121682eff67c49ba0ca0cca1e0f96, type: 3}
+    - {fileID: 21300000, guid: 0c42ea095a7b445b5b33d28cb556191e, type: 3}
+    - {fileID: 21300000, guid: 66ee7d7c8625144049f0d2a4dc504744, type: 3}
+    - {fileID: 21300000, guid: 05c81e6a411954b6dab451db472176da, type: 3}
     - {fileID: 21300000, guid: d623a2b7e069a4c4592d3da48f476189, type: 3}
     - {fileID: 21300000, guid: 57e4117f4cd6ae54284898652e70d553, type: 3}
     bindAsDefault: 1
@@ -89,6 +93,10 @@ SpriteAtlas:
     - d623a2b7e069a4c4592d3da48f476189: 21300000
     - b15121682eff67c49ba0ca0cca1e0f96: 21300000
     - 78d4e1e8303564295987bfbf57f93697: 21300000
+    - 0c42ea095a7b445b5b33d28cb556191e: 21300000
+    - 05c81e6a411954b6dab451db472176da: 21300000
+    - f83951fb273da44b79f7bef0ad095ee0: 21300000
+    - 66ee7d7c8625144049f0d2a4dc504744: 21300000
     - b99dfc9c37b78d341a666342d08badad: 21300000
     - 57e4117f4cd6ae54284898652e70d553: 21300000
   m_MasterAtlas: {fileID: 0}
@@ -99,6 +107,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d623a2b7e069a4c4592d3da48f476189, type: 3}
   - {fileID: 21300000, guid: b15121682eff67c49ba0ca0cca1e0f96, type: 3}
   - {fileID: 21300000, guid: 78d4e1e8303564295987bfbf57f93697, type: 3}
+  - {fileID: 21300000, guid: 0c42ea095a7b445b5b33d28cb556191e, type: 3}
+  - {fileID: 21300000, guid: 05c81e6a411954b6dab451db472176da, type: 3}
+  - {fileID: 21300000, guid: f83951fb273da44b79f7bef0ad095ee0, type: 3}
+  - {fileID: 21300000, guid: 66ee7d7c8625144049f0d2a4dc504744, type: 3}
   - {fileID: 21300000, guid: b99dfc9c37b78d341a666342d08badad, type: 3}
   - {fileID: 21300000, guid: 57e4117f4cd6ae54284898652e70d553, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -108,6 +120,10 @@ SpriteAtlas:
   - white_background
   - rightArrow
   - my_right
+  - right_new-removebg-preview
+  - right_new2
+  - left_new
+  - right_new
   - leftArrow
   - white_button
   m_RenderDataMap: {}

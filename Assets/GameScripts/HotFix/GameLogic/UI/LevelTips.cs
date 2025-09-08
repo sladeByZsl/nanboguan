@@ -8,7 +8,7 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.Tips,hideTimeToClose:0)]
+    [Window(UILayer.System,hideTimeToClose:0)]
     public class LevelTips : UIWindow
     {
         private CanvasGroup m_tipCanvasGroup;
@@ -77,18 +77,25 @@ namespace GameLogic
                 m_goTip.SetActive(true);
                 m_tipCanvasGroup.alpha = 0;
                
+
                 // 淡入
-                await m_tipCanvasGroup.DOFade(1.0f, 0.3f)
-                    .SetEase(Ease.OutQuad)
-                    .ToUniTask(cancellationToken:_tipsCts.Token);
+                if (m_tipCanvasGroup != null)
+                {
+                    await m_tipCanvasGroup.DOFade(1.0f, 0.3f)
+                        .SetEase(Ease.OutQuad)
+                        .ToUniTask(cancellationToken:_tipsCts.Token);
+                }
                 
                 // 等待显示时间
                 await UniTask.Delay(1500);
                 
                 // 淡出
-                await m_tipCanvasGroup.DOFade(0, 0.3f)
-                    .SetEase(Ease.InQuad)
-                    .ToUniTask(cancellationToken:_tipsCts.Token);
+                if (m_tipCanvasGroup != null)
+                {
+                    await m_tipCanvasGroup.DOFade(0, 0.3f)
+                        .SetEase(Ease.InQuad)
+                        .ToUniTask(cancellationToken:_tipsCts.Token);
+                }
                 
                 if (m_goTip != null)
                 {

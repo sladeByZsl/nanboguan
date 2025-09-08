@@ -18,6 +18,15 @@
             "BundleID": 0
         },
         {
+            "Address": "left_new",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/left_new.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
             "Address": "leftArrow",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/leftArrow.png",
             "AssetGUID": "",
@@ -47,6 +56,33 @@
         {
             "Address": "red_button",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/red_button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "right_new-removebg-preview",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/right_new-removebg-preview.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "right_new",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/right_new.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "right_new2",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/right_new2.jpg",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -1143,7 +1179,7 @@
             "UnityCRC": 0,
             "FileHash": "f0e8e15d0127ad74adc94e90d633d5ce",
             "FileCRC": "00000000",
-            "FileSize": 33362,
+            "FileSize": 55562,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1283,7 +1319,7 @@
             "UnityCRC": 0,
             "FileHash": "914298e2de07bcae06021badff4518a5",
             "FileCRC": "00000000",
-            "FileSize": 3676,
+            "FileSize": 3841,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1293,7 +1329,7 @@
             "UnityCRC": 0,
             "FileHash": "26df31b0da9a5f544df5857fe70e36d8",
             "FileCRC": "00000000",
-            "FileSize": 23176,
+            "FileSize": 34263,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1323,7 +1359,7 @@
             "UnityCRC": 0,
             "FileHash": "900908c0688cd8fb2a11ff2b6dfd361f",
             "FileCRC": "00000000",
-            "FileSize": 52360,
+            "FileSize": 52332,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1333,7 +1369,7 @@
             "UnityCRC": 0,
             "FileHash": "f909703ef80cf76384302beda383ea3e",
             "FileCRC": "00000000",
-            "FileSize": 86157,
+            "FileSize": 92156,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1343,7 +1379,7 @@
             "UnityCRC": 0,
             "FileHash": "adea79f9c7dc0098e1731347ad282ca2",
             "FileCRC": "00000000",
-            "FileSize": 20888,
+            "FileSize": 20873,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

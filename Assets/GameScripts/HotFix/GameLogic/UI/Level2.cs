@@ -27,6 +27,7 @@ namespace GameLogic
 		private GameObject m_goAnswerTi;
 		private GameObject m_goAnswerAnswer;
 		private Button m_btnBottle;
+		private Button m_btnSlider;
 		private Button m_btnShowBackGroud;
 		private Button m_btnDoorknob;
 		private GameObject m_goBackgroud;
@@ -41,7 +42,8 @@ namespace GameLogic
 			m_btnItem3 = FindChildComponent<Button>("Bg/m_btnItem3");
 			m_goAnswerTi = FindChild("Bg/m_goAnswerTi").gameObject;
 			m_goAnswerAnswer = FindChild("Bg/m_goAnswerAnswer").gameObject;
-			m_btnBottle = FindChildComponent<Button>("Bg/m_btnBottle");
+			m_btnBottle = FindChildComponent<Button>("Bg/Image/m_btnBottle");
+			m_btnSlider = FindChildComponent<Button>("Bg/Image/m_btnSlider");
 			m_btnShowBackGroud = FindChildComponent<Button>("Bg/m_btnShowBackGroud");
 			m_btnDoorknob = FindChildComponent<Button>("Bg/m_btnDoorknob");
 			m_goBackgroud = FindChild("Bg/m_goBackgroud").gameObject;
@@ -53,6 +55,7 @@ namespace GameLogic
 			m_btnItem2.onClick.AddListener(OnClickItem2Btn);
 			m_btnItem3.onClick.AddListener(OnClickItem3Btn);
 			m_btnBottle.onClick.AddListener(OnClickBottleBtn);
+			m_btnSlider.onClick.AddListener(OnClickSliderBtn);
 			m_btnShowBackGroud.onClick.AddListener(OnClickShowBackGroudBtn);
 			m_btnDoorknob.onClick.AddListener(OnClickDoorknobBtn);
 			m_btnInputOK.onClick.AddListener(OnClickInputOKBtn);
@@ -65,16 +68,26 @@ namespace GameLogic
         protected override void OnCreate()
         {
             base.OnCreate();
-            m_loopingSpinner1= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num1");
-            m_loopingSpinner2= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num2");
-            m_loopingSpinner3= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num3");
-            m_loopingSpinner4= FindChildComponent<LoopingSpinnerExample>("Bg/m_btnBackgroud/m_num4");
+            m_loopingSpinner1= FindChildComponent<LoopingSpinnerExample>("Bg/m_goBackgroud/m_num1");
+            m_loopingSpinner2= FindChildComponent<LoopingSpinnerExample>("Bg/m_goBackgroud/m_num2");
+            m_loopingSpinner3= FindChildComponent<LoopingSpinnerExample>("Bg/m_goBackgroud/m_num3");
+            m_loopingSpinner4= FindChildComponent<LoopingSpinnerExample>("Bg/m_goBackgroud/m_num4");
         }
         protected override void RegisterEvent()
         {
             base.RegisterEvent();
             GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
             AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
+
+        private void OnClickSliderBtn()
+        {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
+            if(BagManager.Instance.IsCanAdd(Global.Cfg_Item_Sticker))
+            {
+                BagManager.Instance.AddItem(Global.Cfg_Item_Sticker);
+                m_btnSlider.gameObject.SetActive(false);
+            }
         }
 
         private void OnRefreshFont()
@@ -192,9 +205,19 @@ namespace GameLogic
                 m_btnDoorknob.gameObject.SetActive(false);
             }
 
+
             if (BagManager.Instance.HasItem(Global.Cfg_Item_Sticker))
             {
                 m_imgBottom.SetSprite(Global.Key_item_new);
+            }
+
+            if (BagManager.Instance.IsItemUsed(Global.Cfg_Item_Gloves)&&!BagManager.Instance.HasItem(Global.Cfg_Item_Sticker))
+            {
+                m_btnSlider.gameObject.SetActive(true);
+            }
+            else
+            {
+                m_btnSlider.gameObject.SetActive(false);
             }
         }
 
@@ -203,8 +226,9 @@ namespace GameLogic
             if (!BagManager.Instance.IsItemUsed(id) && id == Global.Cfg_Item_Gloves)
             {
                 BagManager.Instance.UseItem(id);
-                BagManager.Instance.AddItem(Global.Cfg_Item_Sticker);
+                //BagManager.Instance.AddItem(Global.Cfg_Item_Sticker);
                 m_imgBottom.SetSprite(Global.Key_item_new);
+                m_btnSlider.gameObject.SetActive(true);
             }
         }
 

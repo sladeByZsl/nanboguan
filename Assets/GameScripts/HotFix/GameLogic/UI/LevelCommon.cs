@@ -8,7 +8,7 @@ using AudioType = TEngine.AudioType;
 
 namespace GameLogic
 {
-    [Window(UILayer.System,hideTimeToClose:99999)]
+    [Window(UILayer.Tips,hideTimeToClose:99999)]
     public class LevelCommon : UIWindow
     {
         private List<int> m_itemList = new List<int>(); // 存储所有道具ID
@@ -17,36 +17,37 @@ namespace GameLogic
         private Vector2 m_item2OriginalPos; // 存储Item2的原始位置
 
         #region 脚本工具生成的代码
-        private Button m_btnUpArrow;
-        private GameObject m_go_bg1;
-        private Image m_imgItem1;
-        private GameObject m_go_textBg1;
-        private Text m_textTitle1;
-        private GameObject m_go_bg2;
-        private Image m_imgItem2;
-        private GameObject m_go_textBg2;
-        private Text m_textTitle2;
-        private Button m_btnDownArrow;
-        private Button m_btnMenu;
-        protected override void ScriptGenerator()
-        {
-            m_btnUpArrow = FindChildComponent<Button>("Bg/m_btnUpArrow");
-            m_go_bg1 = FindChild("Bg/item1/m_go_bg1").gameObject;
-            m_imgItem1 = FindChildComponent<Image>("Bg/item1/m_imgItem1");
-            m_go_textBg1 = FindChild("Bg/item1/m_go_textBg1").gameObject;
-            m_textTitle1 = FindChildComponent<Text>("Bg/item1/m_go_textBg1/m_textTitle1");
-            m_go_bg2 = FindChild("Bg/item2/m_go_bg2").gameObject;
-            m_imgItem2 = FindChildComponent<Image>("Bg/item2/m_imgItem2");
-            m_go_textBg2 = FindChild("Bg/item2/m_go_textBg2").gameObject;
-            m_textTitle2 = FindChildComponent<Text>("Bg/item2/m_go_textBg2/m_textTitle2");
-            m_btnDownArrow = FindChildComponent<Button>("Bg/m_btnDownArrow");
-            m_btnMenu = FindChildComponent<Button>("Bg/m_btnMenu");
-            m_btnUpArrow.onClick.AddListener(OnClickUpArrowBtn);
-            m_btnDownArrow.onClick.AddListener(OnClickDownArrowBtn);
-            m_btnMenu.onClick.AddListener(OnClickMenuBtn);
-        }
-
-        #endregion
+		private Button m_btnUpArrow;
+		private GameObject m_go_bg1;
+		private Image m_imgItem1;
+		private GameObject m_go_textBg1;
+		private Text m_textTitle1;
+		private GameObject m_go_bg2;
+		private Image m_imgItem2;
+		private GameObject m_go_textBg2;
+		private Text m_textTitle2;
+		private Button m_btnDownArrow;
+		private Button m_btnMenu;
+		private Text m_textTime;
+		protected override void ScriptGenerator()
+		{
+			m_btnUpArrow = FindChildComponent<Button>("Bg/m_btnUpArrow");
+			m_go_bg1 = FindChild("Bg/item1/m_go_bg1").gameObject;
+			m_imgItem1 = FindChildComponent<Image>("Bg/item1/m_imgItem1");
+			m_go_textBg1 = FindChild("Bg/item1/m_go_textBg1").gameObject;
+			m_textTitle1 = FindChildComponent<Text>("Bg/item1/m_go_textBg1/m_textTitle1");
+			m_go_bg2 = FindChild("Bg/item2/m_go_bg2").gameObject;
+			m_imgItem2 = FindChildComponent<Image>("Bg/item2/m_imgItem2");
+			m_go_textBg2 = FindChild("Bg/item2/m_go_textBg2").gameObject;
+			m_textTitle2 = FindChildComponent<Text>("Bg/item2/m_go_textBg2/m_textTitle2");
+			m_btnDownArrow = FindChildComponent<Button>("Bg/m_btnDownArrow");
+			m_btnMenu = FindChildComponent<Button>("Bg/m_btnMenu");
+			m_textTime = FindChildComponent<Text>("Bg/m_textTime");
+			m_btnUpArrow.onClick.AddListener(OnClickUpArrowBtn);
+			m_btnDownArrow.onClick.AddListener(OnClickDownArrowBtn);
+			m_btnMenu.onClick.AddListener(OnClickMenuBtn);
+		}
+		#endregion
 
         #region 事件
 
@@ -92,7 +93,9 @@ namespace GameLogic
         
         private void OnClickMenuBtn()
         {
-            GameModule.UI.ShowUI<SettingPanel>();
+            GameModule.Audio.Play(AudioType.UISound, "Menu1A");
+            GameModule.UI.CloseAll();
+            GameModule.UI.ShowUI<StartPage>();
         }
 
 

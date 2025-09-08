@@ -24,15 +24,15 @@ namespace GameLogic
         public static string UI_TOP = "UITop";
 
 
-        public const int Cfg_Item_Gloves = 10000;
+        public const int Cfg_Item_Gloves = 10000;//手套
         public const int Cfg_Item_Sticker = 10001;//贴纸
-        public const int Cfg_Item_Origin = 10002;
+        public const int Cfg_Item_Origin = 10002;//罐子
         public const int Cfg_Item_Doorknob = 10003;//门扳手
         public const int Cfg_Item_Brick = 10004;//砖头
 
 
 
-        public static bool Level2Right = false;
+        public static bool Level2Right = false;//假山解密成功
 
         public static int level_index = 0;//gameStart
 
