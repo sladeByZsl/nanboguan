@@ -9,42 +9,67 @@ namespace GameLogic
     [Window(UILayer.UI,hideTimeToClose:0)]
     public class Level1 : UIWindow
     {
-        #region 脚本工具生成的代码
-        private Button m_btnGloves;
-        private Button m_btnRight;
-        private Button m_btnLeft;
-        private Button m_btnShowTask;
-        private GameObject m_goAnswer;
-        private GameObject m_goNoTalk;
-        private GameObject m_go_Talk;
-        private Button m_btnBack;
-        private GameObject m_goTrigger1;
-        private Button m_btnBrick;
-        protected override void ScriptGenerator()
-        {
-            m_btnGloves = FindChildComponent<Button>("Bg/m_btnGloves");
-            m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
-            m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
-            m_btnShowTask = FindChildComponent<Button>("Bg/m_btnShowTask");
-            m_goAnswer = FindChild("Bg/m_goAnswer").gameObject;
-            m_goNoTalk = FindChild("Bg/Image/m_goNoTalk").gameObject;
-            m_go_Talk = FindChild("Bg/Image/m_go_Talk").gameObject;
-            m_btnBack = FindChildComponent<Button>("Bg/m_btnBack");
-            m_goTrigger1 = FindChild("Bg/m_btnBack/bg/m_goTrigger1").gameObject;
-            m_btnBrick = FindChildComponent<Button>("Bg/m_btnBrick");
-            m_btnGloves.onClick.AddListener(OnClickGlovesBtn);
-            m_btnRight.onClick.AddListener(OnClickRightBtn);
-            m_btnLeft.onClick.AddListener(OnClickLeftBtn);
-            m_btnShowTask.onClick.AddListener(OnClickShowTaskBtn);
-            m_btnBack.onClick.AddListener(OnClickBackBtn);
-            m_btnBrick.onClick.AddListener(OnClickBrickBtn);
-        }
-
+        		#region 脚本工具生成的代码
+		private Button m_btnLeft;
+		private Button m_btnRight;
+		private Button m_btnGloves;
+		private Button m_btnShowTask;
+		private GameObject m_goAnswerAnswer;
+		private GameObject m_goAnswerTi;
+		private GameObject m_gobanzi;
+		private GameObject m_goNoTalk;
+		private GameObject m_go_Talk;
+		private GameObject m_goBack;
+		private GameObject m_goTrigger1;
+		private Button m_btnReturn;
+		private Button m_btnBrick;
+		protected override void ScriptGenerator()
+		{
+			m_btnLeft = FindChildComponent<Button>("Bg/m_btnLeft");
+			m_btnRight = FindChildComponent<Button>("Bg/m_btnRight");
+			m_btnGloves = FindChildComponent<Button>("Bg/m_btnGloves");
+			m_btnShowTask = FindChildComponent<Button>("Bg/m_btnShowTask");
+			m_goAnswerAnswer = FindChild("Bg/m_goAnswerAnswer").gameObject;
+			m_goAnswerTi = FindChild("Bg/m_goAnswerTi").gameObject;
+			m_gobanzi = FindChild("Bg/m_gobanzi").gameObject;
+			m_goNoTalk = FindChild("Bg/Image/m_goNoTalk").gameObject;
+			m_go_Talk = FindChild("Bg/Image/m_go_Talk").gameObject;
+			m_goBack = FindChild("Bg/m_goBack").gameObject;
+			m_goTrigger1 = FindChild("Bg/m_goBack/bg/m_goTrigger1").gameObject;
+			m_btnReturn = FindChildComponent<Button>("Bg/m_goBack/m_btnReturn");
+			m_btnBrick = FindChildComponent<Button>("Bg/m_btnBrick");
+			m_btnLeft.onClick.AddListener(OnClickLeftBtn);
+			m_btnRight.onClick.AddListener(OnClickRightBtn);
+			m_btnGloves.onClick.AddListener(OnClickGlovesBtn);
+			m_btnShowTask.onClick.AddListener(OnClickShowTaskBtn);
+			m_btnReturn.onClick.AddListener(OnClickReturnBtn);
+			m_btnBrick.onClick.AddListener(OnClickBrickBtn);
+		}
         #endregion
 
         #region 事件
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+              AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
+            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
+        }
 
-        
+        private void OnRefreshFont()
+        {
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
+            }
+        }
+
+        private void OnClickReturnBtn()
+        {
+            GameModule.Audio.Play(AudioType.UISound,"Menu1A");
+            m_goBack.SetActive(false);
+        }
         private void OnClickBrickBtn()
         {
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
@@ -58,19 +83,23 @@ namespace GameLogic
         private void OnClickBackBtn()
         {
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
-            m_btnBack.gameObject.SetActive(false);
+            m_goBack.SetActive(false);
         }
         private void OnClickShowTaskBtn()
         {
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
-            m_btnBack.gameObject.SetActive(true);
+            m_goBack.SetActive(true);
         }
 
         protected override void OnRefresh()
         {
+            Global.gameStart = true;
+            base.OnRefresh();
+            OnRefreshFont();
+            Global.level_index = 1;
             //Debug.LogError("show:"+BagManager.Instance.IsItemUsed(Global.Cfg_Item_Sticker));
-            m_btnBack.gameObject.SetActive(false);
-
+            m_goBack.gameObject.SetActive(false);
+            
             if (BagManager.Instance.IsCanAdd(Global.Cfg_Item_Gloves))
             {
                 m_btnGloves.gameObject.SetActive(true);
@@ -84,23 +113,28 @@ namespace GameLogic
             {
                 m_goNoTalk.SetActive(false);
                 m_go_Talk.SetActive(true);
-                m_goAnswer.SetActive(true);
+                m_goAnswerTi.SetActive(false);
+                m_goAnswerAnswer.SetActive(true);
                 
-                if (BagManager.Instance.IsItemUsed(Global.Cfg_Item_Brick))
+                if (BagManager.Instance.HasItem(Global.Cfg_Item_Brick)||BagManager.Instance.IsItemUsed(Global.Cfg_Item_Brick))
                 {
                     m_btnBrick.gameObject.SetActive(false);
+                    m_gobanzi.SetActive(false);
                 }
                 else
                 {
                     m_btnBrick.gameObject.SetActive(true);
+                    m_gobanzi.SetActive(true);
                 }
             }
             else
             {
                 m_goNoTalk.SetActive(true);
                 m_go_Talk.SetActive(false);
-                m_goAnswer.SetActive(false);
+                m_goAnswerTi.SetActive(true);
+                m_goAnswerAnswer.SetActive(false);
                 m_btnBrick.gameObject.SetActive(false);
+                m_gobanzi.SetActive(false);
             }
         }
 
@@ -139,26 +173,22 @@ namespace GameLogic
             GameModule.UI.HideUI<LevelCommon>();
             GameModule.UI.HideUI<LevelTips>();
             
-            GameModule.UI.ShowUI<StartPage>();
+            GameModule.UI.ShowUI<Level4>();
         }
         #endregion
-
-        protected override void RegisterEvent()
-        {
-            AddUIEvent<int>(ClientEventID.AddItem,OnAddItem);
-            AddUIEvent<int>(ClientEventID.UseItem,OnUseItem);
-        }
 
         private void OnUseItem(int id)
         {
             if (!BagManager.Instance.IsItemUsed(id)&&id==Global.Cfg_Item_Sticker)
             {
                 BagManager.Instance.UseItem(id);
-                m_btnBack.gameObject.SetActive(false);
-                m_goAnswer.SetActive(true);
+                m_goBack.gameObject.SetActive(false);
+                m_goAnswerAnswer.SetActive(true);
+                m_goAnswerTi.SetActive(false);
                 m_goNoTalk.SetActive(false);
                 m_go_Talk.SetActive(true);
                 m_btnBrick.gameObject.SetActive(true);
+                m_gobanzi.gameObject.SetActive(true);
                 GameEvent.Send(ClientEventID.ShowTips,Global.Key_level1_tips);
             }
         }

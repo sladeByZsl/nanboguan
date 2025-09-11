@@ -4,9 +4,11 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI,hideTimeToClose:0)]
+    [Window(UILayer.System,hideTimeToClose:0)]
     class SettingPanel : UIWindow
     {
+
+
         #region 脚本工具生成的代码
         private Button m_btnBack;
         private Button m_btnMusicOn;
@@ -41,9 +43,16 @@ namespace GameLogic
 
         private void OnClickBackBtn()
         {
-            GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
-            GameModule.UI.HideUI<SettingPanel>();
-            GameModule.UI.ShowUI<StartPage>();
+            if (Global.level_index==0)
+            {
+                GameModule.UI.HideUI<SettingPanel>();
+                GameModule.UI.ShowUI<StartPage>();
+            }
+            else
+            {
+                GameModule.Audio.Play(TEngine.AudioType.UISound,"Menu1A");
+                GameModule.UI.HideUI<SettingPanel>();
+            }
         }
 
         private void OnClickMusicOnBtn()
@@ -156,6 +165,11 @@ namespace GameLogic
                 Color srcColor2 = m_btnEnglish.GetComponent<Image>().color;
                 m_btnZH.GetComponent<Image>().color = new Color(srcColor.r,srcColor.g,srcColor.b,1);
             }
+            
+            // 修改所有Text控件的字体
+            ChangeAllTextFonts();
+            
+            GameEvent.Send(ClientEventID.LanguageChanged);
         }
 
         private void OnClickEnglishBtn()
@@ -184,6 +198,7 @@ namespace GameLogic
 
         protected override void OnRefresh()
         {
+            Global.gameStart = false;
             base.OnRefresh();
             if (PlayerPrefs.GetInt("Music",1)==1)
             {
@@ -205,6 +220,33 @@ namespace GameLogic
 
             int language= PlayerPrefs.GetInt("Language", 1);
             ShowLanguage(language);
+        }
+
+
+
+        /// <summary>
+        /// 遍历场景中所有Text控件并修改字体
+        /// </summary>
+        private void ChangeAllTextFonts()
+        {
+            // 获取场景中所有的Text组件
+            Text[] allTexts = Object.FindObjectsOfType<Text>();
+            
+            foreach (Text txt in allTexts)
+            {
+                if (txt == null) continue;
+                
+                // 根据当前语言设置字体
+                if (LocalizationManager.Instance.language == Language.ChineseSimplified || 
+                    LocalizationManager.Instance.language == Language.ChineseTraditional)
+                {
+                    txt.font = Global.chineseFont;
+                }
+                else
+                {
+                    txt.font = Global.englishFont;
+                }
+            }
         }
     }
 }

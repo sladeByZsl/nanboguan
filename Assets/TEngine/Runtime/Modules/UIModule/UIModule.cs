@@ -279,6 +279,11 @@ namespace TEngine
             ShowUIImp(type, false, userDatas);
         }
 
+        public bool IsShowUI<T>() where T : UIWindow
+        {
+            return IsContains(typeof(T).FullName);
+        }
+
         private void ShowUIImp(Type type, bool isAsync, params System.Object[] userDatas)
         {
             string windowName = type.FullName;

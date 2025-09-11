@@ -21,8 +21,8 @@ MonoBehaviour:
     EnableAddressable: 1
     LocationToLower: 0
     IncludeAssetGUID: 0
-    IgnoreDefaultType: 1
     AutoCollectShaders: 1
+    IgnoreRuleName: NormalIgnoreRule
     Groups:
     - GroupName: Actor
       GroupDesc: "\u89D2\u8272"
@@ -159,19 +159,6 @@ MonoBehaviour:
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-    - GroupName: Fonts
-      GroupDesc: "\u5B57\u4F53"
-      AssetTags: Fonts
-      ActiveRuleName: EnableGroup
-      Collectors:
-      - CollectPath: Assets/AssetRaw/Fonts
-        CollectorGUID: 2473375c9ee163a4b861278b38091455
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TEngine;
 using UnityEngine;
 
 namespace GameLogic
@@ -23,14 +24,48 @@ namespace GameLogic
         public static string UI_TOP = "UITop";
 
 
-        public const int Cfg_Item_Gloves = 10000;
+        public const int Cfg_Item_Gloves = 10000;//手套
         public const int Cfg_Item_Sticker = 10001;//贴纸
-        public const int Cfg_Item_Origin = 10002;
+        public const int Cfg_Item_Origin = 10002;//罐子
         public const int Cfg_Item_Doorknob = 10003;//门扳手
         public const int Cfg_Item_Brick = 10004;//砖头
 
 
 
-        public static bool Level2Right = false;
+        public static bool Level2Right = false;//假山解密成功
+
+        public static int level_index = 0;//gameStart
+
+        public static Font chineseFont;
+        public static Font englishFont;
+        public static bool fontsLoaded = false;
+
+        public static bool gameStart = false;
+        public static int gameSecond = 0;
+
+        /// <summary>
+        /// 加载字体资源（只加载一次）
+        /// </summary>
+        public static void LoadFonts()
+        {
+            if (!fontsLoaded)
+            {
+                chineseFont = Resources.Load<Font>("Fonts/ck");
+                englishFont = Resources.Load<Font>("Fonts/eng");
+                fontsLoaded = true;
+            }
+        }
+
+        public static Font GetFont()
+        {
+            if (LocalizationManager.Instance.language == Language.ChineseSimplified)
+            {
+                return chineseFont;
+            }
+            else
+            {
+                return englishFont;
+            }
+        }
     }
 }

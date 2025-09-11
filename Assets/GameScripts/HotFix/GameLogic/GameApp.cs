@@ -39,8 +39,13 @@ public partial class GameApp:Singleton<GameApp>
     private void StartGameLogic()
     {
         GameModule.Audio.Play(AudioType.Music,"song18",true);
+        Global.LoadFonts();
         //GameModule.UI.HideUI<LoadingPanel>();
         GameModule.UI.ShowUI<StartPage>();
+        GameModule.Timer.AddTimer((arg) =>
+        {
+            GameEvent.Send(ClientEventID.TimerAdd);
+        },1.0f,true,false);
     }
 
     /// <summary>

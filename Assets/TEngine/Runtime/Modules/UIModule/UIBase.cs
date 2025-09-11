@@ -119,8 +119,8 @@ namespace TEngine
         /// </summary>
         protected virtual void OnRefresh()
         {
+            
         }
-
         /// <summary>
         /// 是否需要Update
         /// </summary>

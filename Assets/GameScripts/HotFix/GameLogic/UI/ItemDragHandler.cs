@@ -30,13 +30,19 @@ namespace GameLogic
 
         public void OnDrag(PointerEventData eventData)
         {
-            m_rectTransform.anchoredPosition += eventData.delta / m_canvas.scaleFactor;
+            if (m_rectTransform!=null)
+            {
+                m_rectTransform.anchoredPosition += eventData.delta / m_canvas.scaleFactor;
+            }
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            if (m_parent!=null)
+            {
+                m_parent.OnItemDragEnd(m_itemIndex, eventData);
+            }
             //m_canvas.sortingLayerName = Global.UI;
-            m_parent.OnItemDragEnd(m_itemIndex, eventData);
             GameModule.Audio.Play(AudioType.UISound,"Menu1A");
         }
     }

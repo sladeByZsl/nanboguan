@@ -74,10 +74,19 @@ namespace GameLogic
         }
         #endregion
 
+        protected override void RegisterEvent()
+        {
+            base.RegisterEvent();
+            GameEvent.AddEventListener(ClientEventID.LanguageChanged,OnRefreshFont);
+        }
+
 
         protected override void OnRefresh()
         {
+            Global.level_index = 0;
+            Global.gameStart = false;
             base.OnRefresh();
+            OnRefreshFont();
             if (PlayerPrefs.GetInt("Music", 1) == 1)
             {
                 GameModule.Audio.MusicEnable = true;
@@ -96,6 +105,16 @@ namespace GameLogic
             {
                 GameModule.Audio.SoundEnable = false;
                 GameModule.Audio.UISoundEnable = false;
+            }
+        }
+
+        private void OnRefreshFont()
+        {
+            if(gameObject==null||transform==null) return;
+            var texts = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            foreach (var txt in texts)
+            {
+                txt.font = Global.GetFont();
             }
         }
     }
