@@ -9,8 +9,62 @@
     "PackageVersion": "Simulate",
     "AssetList": [
         {
+            "Address": "arrow_left",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/arrow_left.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "arrow_right",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/arrow_right.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
             "Address": "blue_button",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/blue_button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "Circle_Tool bar",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/Circle_Tool bar.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "clock",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/clock.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "frame for map",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/frame for map.jpg",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "Guide button",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/Guide button.png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -47,6 +101,24 @@
         {
             "Address": "my_right",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/my_right.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "new_frame for map",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/new_frame for map.jpg",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "no shadow_frame for map",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/no shadow_frame for map.jpg",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -92,6 +164,42 @@
         {
             "Address": "rightArrow",
             "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/rightArrow.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "Scene 1 bg",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/Scene 1 bg.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "Setting button",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/Setting button.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "text bar_Tool bar",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/text bar_Tool bar.png",
+            "AssetGUID": "",
+            "AssetTags": [
+                "UIRaw"
+            ],
+            "BundleID": 0
+        },
+        {
+            "Address": "Tool bar",
+            "AssetPath": "Assets/AssetRaw/UIRaw/Atlas/Common/Tool bar.png",
             "AssetGUID": "",
             "AssetTags": [
                 "UIRaw"
@@ -1179,7 +1287,7 @@
             "UnityCRC": 0,
             "FileHash": "f0e8e15d0127ad74adc94e90d633d5ce",
             "FileCRC": "00000000",
-            "FileSize": 55562,
+            "FileSize": 301864,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1359,7 +1467,7 @@
             "UnityCRC": 0,
             "FileHash": "900908c0688cd8fb2a11ff2b6dfd361f",
             "FileCRC": "00000000",
-            "FileSize": 52332,
+            "FileSize": 54590,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1369,7 +1477,7 @@
             "UnityCRC": 0,
             "FileHash": "f909703ef80cf76384302beda383ea3e",
             "FileCRC": "00000000",
-            "FileSize": 92156,
+            "FileSize": 92268,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1389,7 +1497,7 @@
             "UnityCRC": 0,
             "FileHash": "e3322d17a03e56f43b5d8094717c0688",
             "FileCRC": "00000000",
-            "FileSize": 14007,
+            "FileSize": 14119,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -1399,7 +1507,7 @@
             "UnityCRC": 0,
             "FileHash": "79c505c8003e9e7b98266dfeae78ac36",
             "FileCRC": "00000000",
-            "FileSize": 48079,
+            "FileSize": 53056,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

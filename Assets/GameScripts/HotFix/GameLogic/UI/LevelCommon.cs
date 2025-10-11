@@ -16,7 +16,7 @@ namespace GameLogic
         private Vector2 m_item1OriginalPos; // 存储Item1的原始位置
         private Vector2 m_item2OriginalPos; // 存储Item2的原始位置
 
-        #region 脚本工具生成的代码
+       		#region 脚本工具生成的代码
 		private Button m_btnUpArrow;
 		private GameObject m_go_bg1;
 		private Image m_imgItem1;
@@ -28,6 +28,7 @@ namespace GameLogic
 		private Text m_textTitle2;
 		private Button m_btnDownArrow;
 		private Button m_btnMenu;
+		private Button m_btnCheck;
 		private Text m_textTime;
 		protected override void ScriptGenerator()
 		{
@@ -42,10 +43,12 @@ namespace GameLogic
 			m_textTitle2 = FindChildComponent<Text>("Bg/item2/m_go_textBg2/m_textTitle2");
 			m_btnDownArrow = FindChildComponent<Button>("Bg/m_btnDownArrow");
 			m_btnMenu = FindChildComponent<Button>("Bg/m_btnMenu");
+			m_btnCheck = FindChildComponent<Button>("Bg/m_btnCheck");
 			m_textTime = FindChildComponent<Text>("Bg/m_textTime");
 			m_btnUpArrow.onClick.AddListener(OnClickUpArrowBtn);
 			m_btnDownArrow.onClick.AddListener(OnClickDownArrowBtn);
 			m_btnMenu.onClick.AddListener(OnClickMenuBtn);
+			m_btnCheck.onClick.AddListener(OnClickCheckBtn);
 		}
 		#endregion
 
@@ -105,6 +108,42 @@ namespace GameLogic
             {
                 m_currentIndex--;
                 UpdateItemDisplay();
+            }
+        }
+
+        private void OnClickCheckBtn()
+        {
+            GameModule.Audio.Play(AudioType.UISound, "Menu1A");
+
+            if (Global.level_index == 1)
+            {
+                if (!BagManager.Instance.HasItem(Global.Cfg_Item_Gloves))
+                {
+                    GameEvent.Send(ClientEventID.ShowTips,"拿起手套看看！");
+                }
+                else if(!BagManager.Instance.HasItem(Global.Cfg_Item_Sticker)   )
+                {
+                    GameEvent.Send(ClientEventID.ShowTips,"点点贴纸！");
+                }
+            }
+            else if (Global.level_index == 2)
+            {
+                if (!BagManager.Instance.HasItem(Global.Cfg_Item_Brick))
+                {
+                    GameEvent.Send(ClientEventID.ShowTips,"用砖头砸罐子！");
+                }
+            }
+            else if (Global.level_index == 3)
+            {
+                GameEvent.Send(ClientEventID.ShowTips,"3");
+            }
+            else if (Global.level_index == 4)
+            {
+                GameEvent.Send(ClientEventID.ShowTips,"4");
+            }
+            else
+            {
+                GameEvent.Send(ClientEventID.ShowTips,"other");
             }
         }
         

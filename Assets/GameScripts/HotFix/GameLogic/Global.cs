@@ -17,6 +17,8 @@ namespace GameLogic
         public static string Key_level2_tips = "level2_tips";
         public static string Key_level2_liekai_tips = "level2_tips_liekai";
         public static string Key_level2_tips_wrong_tips = "level2_tips_wrong";
+
+        public static string Key_level_common_check_tips = "level_common_tips_check";
         
         public static string Key_item_new = "Item_New";
 
