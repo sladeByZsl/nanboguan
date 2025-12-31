@@ -38,7 +38,7 @@ namespace TEngine
         private bool m_RunInBackground = true;
 
         [SerializeField]
-        private bool m_NeverSleep = true;
+        private bool m_NeverSleep = false;
 
         /// <summary>
         /// 获取或设置编辑器语言（仅编辑器内有效）。

@@ -484,7 +484,7 @@ MonoBehaviour:
   m_FrameRate: 120
   m_GameSpeed: 1
   m_RunInBackground: 1
-  m_NeverSleep: 1
+  m_NeverSleep: 0
 --- !u!1 &790894653
 GameObject:
   m_ObjectHideFlags: 0
