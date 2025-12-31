@@ -327,6 +327,7 @@ namespace TEngine
         
         public void HideUI<T>() where T : UIWindow
         {
+            //UnityEngine.Debug.LogError($"HideUI<{typeof(T).FullName}>");
             HideUI(typeof(T));
         }
 

@@ -196,6 +196,17 @@ namespace TEngine.Editor
             return DateTime.Now.ToString("yyyy-MM-dd") + "-"+Application.version;
         }
 
+        [MenuItem("TEngine/Quick Build/一键打包安卓Debug包", false, 90)]
+        public static void AutomationBuildAndroidDebug()
+        {
+            BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
+            BuildDLLCommand.BuildAndCopyDlls(target);
+            AssetDatabase.Refresh();
+            BuildInternal(target, outputRoot: Application.dataPath + "/../Bundles", packageVersion: GetBuildPackageVersion());
+            AssetDatabase.Refresh();
+            BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/Android.apk",true);
+        }
+
         [MenuItem("TEngine/Quick Build/一键打包Android正式包", false, 90)]
         public static void AutomationBuildAndroid()
         {
@@ -219,7 +230,7 @@ namespace TEngine.Editor
             BuildImp(BuildTargetGroup.iOS, BuildTarget.iOS, $"{Application.dataPath}/../Build/IOS/XCode_Project");
         }
 
-        public static void BuildImp(BuildTargetGroup buildTargetGroup, BuildTarget buildTarget, string locationPathName)
+        public static void BuildImp(BuildTargetGroup buildTargetGroup, BuildTarget buildTarget, string locationPathName,bool isDebug = false)
         {
             EditorUserBuildSettings.SwitchActiveBuildTarget(buildTargetGroup, BuildTarget.StandaloneWindows64);
             AssetDatabase.Refresh();
@@ -232,15 +243,31 @@ namespace TEngine.Editor
                 target = buildTarget,
                 options = BuildOptions.None
             };
-            EditorUserBuildSettings.buildAppBundle = true;
-            PlayerSettings.Android.minifyDebug = true;
-            PlayerSettings.Android.minifyRelease = true;
+            if (isDebug)
+            {
+                buildPlayerOptions.options |= BuildOptions.Development;
+                PlayerSettings.Android.minifyDebug = false;
+                PlayerSettings.Android.minifyRelease = false;
+                EditorUserBuildSettings.buildAppBundle = false;
+                PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARMv7;
+                PlayerSettings.SetScriptingBackend(buildTargetGroup, ScriptingImplementation.Mono2x);
+            }
+            else
+            {
+                buildPlayerOptions.options |= BuildOptions.CleanBuildCache;
+                EditorUserBuildSettings.buildAppBundle = true;
+                PlayerSettings.Android.minifyDebug = true;
+                PlayerSettings.Android.minifyRelease = true;
+                 PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARMv7 | AndroidArchitecture.ARM64;
+                PlayerSettings.SetScriptingBackend(buildTargetGroup, ScriptingImplementation.IL2CPP);
+            }
             var assetPath = Application.dataPath.Replace("Assets", "");
             PlayerSettings.Android.keystoreName = assetPath+"key/user.keystore";
             PlayerSettings.Android.keystorePass = "abc123";
             PlayerSettings.Android.keyaliasName = "abc123";
             PlayerSettings.Android.keyaliasPass = "abc123";
             EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
+           
             var report = BuildPipeline.BuildPlayer(buildPlayerOptions);
             BuildSummary summary = report.summary;
             if (summary.result == BuildResult.Succeeded)
