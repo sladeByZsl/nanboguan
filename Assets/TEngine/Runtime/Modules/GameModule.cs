@@ -177,13 +177,15 @@ namespace TEngine
         #region HandlePlayModeStateChanged
         private void OnEnable()
         {
+            Log.Info("GameModule OnEnable");
 #if UNITY_EDITOR
             EditorApplication.playModeStateChanged += HandlePlayModeStateChanged;
 #endif
         }
 
         private void OnDisable()
-        {
+        {   
+            Log.Info("GameModule OnDisable");
 #if UNITY_EDITOR
             EditorApplication.playModeStateChanged -= HandlePlayModeStateChanged;
 #endif
